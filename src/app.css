@@ -1,0 +1,39 @@
+*, body {
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+    font-family: BaseFont;
+}
+
+body {
+    background-color: var(--background-color);
+}
+nav a {
+    font-family: RoundedNunito;
+    font-weight: 600;
+}
+p {
+    font-family: RoundedNunito;
+    font-weight: 400;
+}
+h1, h2, h3, h4 {
+    font-family: HeroMuli;
+}
+.hero-title {
+    font-family: HeroMuli;
+    line-height: calc(var(--hero-fs) * 1.25);
+}
+.hero-subtitle {
+    font-family: RoundedNunito;
+    font-weight: 600;
+    color: rgb(152, 152, 152);
+}
+input, button, textarea {
+    font-family: RoundedNunito;
+    font-weight: 400;
+}
+button {
+    border: none;
+}
