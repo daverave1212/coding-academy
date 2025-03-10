@@ -19,7 +19,7 @@
         max-height: 3rem;
         max-width: 3rem;
     }
-    .floater-wrapper {
+    .floater {
         position: absolute;
     }
 
@@ -45,7 +45,7 @@
 
 </script>
 
-<div class="floater-wrapper" style={style}>
+<div class="floater" style={style}>
     <Animatable setAnimateFunction={func => animateTo = func} from={{ rotate: rotate + 50, scale: 0, x: x + 32, y: y + 32 }}>
         <div class="floater-box shadowed" style={`background-color: ${color};`}>
             <img src={src}/>

@@ -1,5 +1,5 @@
 <style>
-    .side-menu-wrapper {
+    .side-menu-box {
         position: fixed;
         top: 0;
         left: 0;
@@ -10,7 +10,7 @@
         width: 0vw;
         height: 100vh;
     }
-    .side-menu-wrapper--open {
+    .side-menu-box--open {
         width: 100vw;
     }
 
@@ -71,9 +71,9 @@
     }
 
     $: sideMenuWrapperClass =
-        state == 'OPEN' ? 'side-menu-wrapper side-menu-wrapper--open' :
-        state == 'CLOSING' ? 'side-menu-wrapper side-menu-wrapper--open' :
-        'side-menu-wrapper'
+        state == 'OPEN' ? 'side-menu-box side-menu-box--open' :
+        state == 'CLOSING' ? 'side-menu-box side-menu-box--open' :
+        'side-menu-box'
     $: blackOverlayClass =
         state == 'OPEN' ? 'side-menu-black-overlay side-menu-black-overlay--open' :
         'side-menu-black-overlay'

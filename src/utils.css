@@ -1,6 +1,13 @@
 :root {
     --page-padding-left: 10vw;
     --page-padding-right: 10vw;
+    --z-lowest: -300;
+    --z-lower: -200;
+    --z-low: -100;
+    --z-normal: 0;
+    --z-high: 100;
+    --z-higher: 200;
+    --z-highest: 300;
 }
 @media (max-width: 1300px) {
     :root {
@@ -43,6 +50,12 @@
 }
 .center-text {
     text-align: center;
+}
+.relative, .position-relative {
+    position: relative;
+}
+.absolute, .position-absolute {
+    position: absolute;
 }
 .flex-content {
     display: flex;
@@ -196,6 +209,54 @@
 
 .circle {
     border-radius: 50%;
+    width: 2rem;
+    aspect-ratio: 1;
+
+}
+.floating-object {
+    --duration: 7s;
+    animation: FloatingObject var(--duration) ease-in-out infinite;
+}
+@keyframes FloatingObject {
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.snappy-object {
+    --rotate: 0deg;
+    animation: SnappyObject 0.4s normal 1;
+    transition: transform;
+    transform: rotate(var(--rotate));
+}
+@keyframes SnappyObject {
+    20% {
+        transform: rotate(calc(var(--rotate)));
+    }
+    30% {
+        transform: rotate(calc(var(--rotate) -5deg));
+    }
+    50% {
+        transform: rotate(calc(var(--rotate) + 5deg));
+    }
+    65% {
+        transform: rotate(calc(var(--rotate) - 2.5deg));
+    }
+    80% {
+        transform: rotate(calc(var(--rotate) + 2.5deg));
+    }
+    90% {
+        transform: rotate(calc(var(--rotate) - 1deg));
+    }
+    100% {
+        transform: rotate(calc(var(--rotate)));
+    }
 }
 
 

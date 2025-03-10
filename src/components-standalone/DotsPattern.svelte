@@ -3,23 +3,21 @@
     .dots-pattern {
         position: absolute;
         display: flex;
-        z-index: -999999;
+        z-index: var(--z-lowest);
     }
 </style>
 
 <script>
 
     let props = $props()
-    let { nRows, nCols, color, top, left, right, bottom } = $derived(props)
+    let { nRows, nCols, color, top, left, right, bottom, style } = $derived(props)
 
     let size = $derived(props.size == null? 8: props.size)
     let gap = $derived(props.gap == null? size * 2: props.gap)
 
-    console.log({nRows, nCols})
-
 </script>
 
-<div class={`dots-pattern flex column ${props.class}`} style={`gap: ${gap}px; top: ${top ?? 'none'}; left: ${left ?? 'none'}; bottom: ${bottom ?? 'none'}; right: ${right ?? 'none'}`}>
+<div class={`dots-pattern flex column ${props.class}`} style={`gap: ${gap}px; ${style}`}>
     {#each new Array(nRows) as row}
         <div class="flex" style={`gap: ${gap}px`}>
             {#each new Array(nCols) as col}
