@@ -43,8 +43,9 @@
         { name: 'Contact', href: '/contact'},
     ]}
     isBurgerOpen={isBurgerOpen} setIsBurgerOpen={bool => isBurgerOpen = bool}
+    itemClass='nav-item-color-on-hover snappy-object-on-hover'
 >
-    <MobileBurgerButton src="images/burger.svg" onClick={() => isBurgerOpen = true}></MobileBurgerButton>
+    <MobileBurgerButton style="background-color: var(--theme-color-1)" src="images/burger.svg" onClick={() => isBurgerOpen = true}></MobileBurgerButton>
 </Nav>
 
 {#key data.url}

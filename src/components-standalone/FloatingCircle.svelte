@@ -1,9 +1,9 @@
 <script>
 
-    let { style } = $props()
+    let props = $props()
 
 </script>
 
-<div class="circle floating-object absolute" style={style}>
+<div class={`circle floating-object absolute ${props.class}`} style={props.style}>
 
 </div>

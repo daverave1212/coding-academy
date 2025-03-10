@@ -37,6 +37,10 @@
 
     let { src, delay, rotate, scale, x, y, color } = $derived(props)
 
+    $effect(() => {
+        console.log(props.class)
+    })
+
     onMount(() => {
         setTimeout(() => {
             animateTo(2000, { rotate, scale: scale, x, y })
@@ -45,7 +49,7 @@
 
 </script>
 
-<div class="floater" style={style}>
+<div class={`floater ${props.class}`} style={style}>
     <Animatable setAnimateFunction={func => animateTo = func} from={{ rotate: rotate + 50, scale: 0, x: x + 32, y: y + 32 }}>
         <div class="floater-box shadowed" style={`background-color: ${color};`}>
             <img src={src}/>

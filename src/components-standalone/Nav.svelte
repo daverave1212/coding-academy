@@ -17,7 +17,7 @@
         --nav-color: rgb(68, 68, 68);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
         :root {
             --nav-bg-color: white;
             --nav-color: rgb(68, 68, 68);
@@ -29,7 +29,7 @@
         text-decoration: none;
         line-height: calc(var(--base-nav-height));
     }
-    @media (orientation: landscape) {
+    @media (min-width: 1080px) {
         nav {
             width: 100%;
             height: var(--base-nav-height);
@@ -56,7 +56,7 @@
         }
     }
 
-    @media (orientation: portrait) {
+    @media (max-width: 1080px) {
         nav {
             width: 100vw;
             height: 0px;
@@ -85,12 +85,15 @@
     export let isBurgerOpen
     export let setIsBurgerOpen
 
+    export let itemClass = ''
+    export let style = ''
+
 </script>
 
-<nav>
+<nav {style}>
     <div class="landscape-only">
         {#each options as {name, href}}
-            <a href={href}>{name}</a>
+            <a href={href} class={itemClass}>{name}</a>
         {/each}
     </div>
     <div class="portrait-only">
@@ -98,7 +101,7 @@
         <SideMenu isOpen={isBurgerOpen} setIsOpen={setIsBurgerOpen}>
             <div class="portrait-side-menu-content">
                 {#each options as {name, href}}
-                    <a href={href}>{name}</a>
+                    <a href={href} class={itemClass}>{name}</a>
                 {/each}
             </div>
         </SideMenu>

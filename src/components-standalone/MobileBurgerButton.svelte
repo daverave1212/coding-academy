@@ -3,7 +3,7 @@
     .burger-button {
         z-index: 99999;
     }
-    @media (orientation: landscape) {
+    @media (min-width: 1080px) {
         .burger-button {
             display: none;
         }
@@ -39,9 +39,10 @@
     export let src
     export let isShown = true
     export let onClick
+    export let style = ''
 
 </script>
 
-<div class="burger-button {isShown? '': 'hidden'} rounded colorful" on:click={onClick}>
+<div {style} class="burger-button {isShown? '': 'hidden'} rounded" on:click={onClick}>
     <img src={src}/>
 </div>
