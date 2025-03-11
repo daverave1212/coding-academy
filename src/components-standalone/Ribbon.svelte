@@ -9,7 +9,7 @@
         aspect-ratio: 125 / 391;
         position: absolute;
         height: var(--height);
-        transform: translateX(calc(27 / 391) * var(--width) * 1px);
+        transform: translateX(-14px);
         
     }
     .ribbon img {

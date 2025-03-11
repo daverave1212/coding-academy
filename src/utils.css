@@ -139,6 +139,10 @@ button {
 .flex {
     display: flex;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
 .flex.column {
     flex-direction: column;
 }
