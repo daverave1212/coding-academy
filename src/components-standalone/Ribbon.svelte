@@ -14,13 +14,16 @@
     }
     .ribbon img {
         height: 100%;
+        z-index: var(--z-higher);
     }
     .ribbon h3 {
-        position: absolute;
         width: 100%;
+        z-index: var(--z-highest);
+
+        position: absolute;
         font-size: calc(var(--height) * 0.35);
         font-family: RoundedNunito;
-        font-weight: 400;
+        font-weight: 600;
         color: white;
 
         line-height: calc(var(--height));
@@ -36,8 +39,8 @@
 </script>
 
 <div class="ribbon flex column center-text" style={props.style}>
+    <img class="shadowed" src={`/images/${props.name}.png`}/>
     <h3>
         {@render props.children?.()}
     </h3>
-    <img src={`/images/${props.name}.png`}/>
 </div>

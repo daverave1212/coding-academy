@@ -50,6 +50,7 @@
     }
 
 
+
 </style>
 
 <div class="page margin-top-4 relative">
@@ -87,5 +88,27 @@
             </div>
         </div>
     </div>
-    <PriceCard></PriceCard>
+    <PriceCard
+        ribbonName="RibbonYellow" ribbonText="App Dev"
+        price={765} subtext="RON"
+        title="Zero to Hero: Code Full Real-World Apps"
+        subtitle="Cel mai practic curs de programare de aplicatii pentru incepatori si freelanceri."
+
+        featureTickName="CheckYellow" features={[
+            'Perfect pentru incepatori',
+            'Creeaza aplicatii adevarate',
+            'Apps pe Web/Desktop/Mobile',
+            'Accent pe practicalitate',
+            'UI/UX design',
+            'Zona Unirii'
+        ]}
+
+        discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-2)" discounts={[
+            { text: 'Ma inscriu pana pe 30 Aprilie!', discount: 0.1 },
+            { text: 'Aduc un prieten!', discount: 0.1 },
+            { text: 'Cumpar ambele cursuri!', discount: 0.1 }
+        ]}
+    >
+        
+    </PriceCard>
 </div>

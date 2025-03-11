@@ -86,3 +86,7 @@ function getUnitByProp(prop) {
         ''
     )
 }
+
+export function roundDownToNearestFive(num) {
+    return Math.floor(num / 5) * 5;
+}
