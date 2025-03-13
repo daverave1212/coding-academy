@@ -1,3 +1,27 @@
 .nav-item-color-on-hover:hover {
     color: var(--theme-color-2);
 }
+
+.hero-title {
+    color: var(--dark-gray);
+    font-family: HeroMuli;
+}
+
+.hero-center {
+    max-width: 740px;
+}
+.hero-graphic {
+    overflow-x: visible;
+    position: relative;
+    flex-grow: 1;
+}
+
+@media (max-width: 1080px) {
+    .hero-center {
+        max-width: none;
+        text-align: center;
+    }
+    .hero-graphic {
+        min-height: 70vh;
+    }
+}

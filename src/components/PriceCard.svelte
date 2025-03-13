@@ -2,7 +2,7 @@
 <style>
     :root {
         --price-card-w: 375px;
-        --price-card-h: 745px;
+        --price-card-h: 695px;
     }
     .price-card {
         width: var(--price-card-w);
@@ -20,14 +20,14 @@
         font-size: 4rem;
     }
 
-    .currency {
+    .subtext {
         font-size: 1rem;
         margin-top: -0.75rem;
         color: gray;
         font-family: RoundedNunito !important;
         font-weight: 600;
     }
-    .currency-base-price {
+    .subtext-base-price {
         color: gray;
         font-family: RoundedNunito !important;
         font-weight: 600;
@@ -51,13 +51,6 @@
         font-size: 1.5rem;
         line-height: 2rem;
         font-family: RoundedNunito;
-        color: white;
-    }
-    .ribbon-currency {
-        font-family: RoundedNunito;
-        font-size: 1rem;
-        margin-top: 0.5rem;
-        margin-left: 0.25rem;
         color: white;
     }
 
@@ -92,10 +85,11 @@
     let props = $props()
     let {
         ribbonName, ribbonText,
-        price, subtext,
+        price, currency, subtext,
         title, subtitle,
         featureTickName, features,
-        discountText, discountCheckColor, discounts
+        discountText, discountCheckColor, discounts,
+        buttonColor, buttonAnimationColor
 
 
     } = $derived(props)
@@ -120,19 +114,26 @@
 <div class="price-card shadowed">
     <Ribbon name={ribbonName} style='top: 1.5rem;'>{ribbonText}</Ribbon>
     <div class="content">
-        <div class="price flex-center margin-top-4">
+        <div class="price flex-center margin-top-2">
             <div class="flex column">
                 {#if currentDiscount != 0}
                     <div class="left text-align-left">{roundDownToNearestFive(currentPrice)}</div>
-                    <div class="currency"><span class="currency-base-price strikethrough">{price}</span> ({Math.floor(currentDiscount * 100)}% discount)</div>
+                    <div class="subtext"><span class="subtext-base-price strikethrough">{price}</span> ({Math.floor(currentDiscount * 100)}% discount)</div>
                 {:else}
-                    <div class="left text-align-left">{currentPrice}</div>
-                    <div class="currency">{subtext}</div>
+                    <div class="left text-align-left flex">
+                        {#if currency != null && currency.length != 0}
+                            <span style="font-family: HeroMuli; font-size: 3rem; margin-top: 1rem; margin-right: 8px; position: inline-block;">{currency}</span>
+                        {/if}
+                        {currentPrice}
+                    </div>
+                    <div class="subtext">{subtext}</div>
                 {/if}
             </div>
         </div>
         <!-- <div class="margin-top-half" style="display: block; width: 100%; height: 1px;"></div> -->
-        <h4 class="margin-top-1" style={`font-size: 1.25rem; text-align: center`}>{title}</h4>
+        <h4 class="margin-top-1" style={`font-size: 1.25rem; text-align: center`}>
+            {@render props.children?.()}
+        </h4>
         <p class="margin-top-1" style="font-size: 1rem;">{subtitle}</p>
         {#each features as feature (feature)}
             <p class="feature margin-top-3q"><img src={`/images/${featureTickName}.png`}/>{feature}</p>
@@ -144,8 +145,8 @@
                 <label onclick={() => onCheckboxChange(i)} name={`${ribbonText}-${i}`}>{text}</label>
             </p>
         {/each}
-        <div class="center-content margin-top-2">
-            <MediumButton color="var(--theme-color-2)" animationColor='var(--theme-color-1)'>Inscrie-te!</MediumButton>
+        <div class="center-content margin-top-1">
+            <MediumButton color={buttonColor} animationColor={buttonAnimationColor}>Inscrie-te!</MediumButton>
         </div>
     </div>
 </div>
