@@ -1,14 +1,14 @@
 <style>
     button {
         font-family: RoundedNunito;
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 500;
         
-        padding: 2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding: 1.75rem;
+        padding-left: 2.75rem;
+        padding-right: 2.75rem;
         
-        border-radius: 3rem;
+        border-radius: 2.5rem;
 
         color: white;
         background-color: var(--theme-color-1);

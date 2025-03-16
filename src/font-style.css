@@ -25,10 +25,10 @@ html {
     --input-fs: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1368px) {
     :root {
         --nav-fs: 1.25rem;
-        --hero-fs: 3rem;
+        --hero-fs: 3.25rem;
         --hero-subtitle-fs: 1.5rem;
         --h1-fs: 2rem;
         --h2-fs: 1.75rem;

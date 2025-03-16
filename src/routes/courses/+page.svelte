@@ -44,6 +44,7 @@
         {/snippet}
 
         {#snippet content()}
+        
             <p class="content">Cursul se axează pe aplicații front-end: website-uri funcționale si aplicații de Desktop și mobile. Vom face proiecte reale, rezolva probleme adevărate de programare, iar rezultatul final va fi o aplicație gata de livrare.</p>
             
             <h4 class="margin-top-2">Programa</h4>
@@ -64,7 +65,6 @@
             <p class="content">Prețul de bază al cursului este 850 RON, cu <b class="yellow">discounturi aplicate</b> pentru înscrierea din timp, aducerea încă unei persoane sau achiziționarea ambelor cursuri (click pe Înscrie-te pentru detalii despre reduceri).</p>
             <p class="content">Cursul de bază este în persoană, cât mai aproape de zona Unirii, dar dacă există cerere vom ține încă o sesiune suplimentară online, la un preț ajustat.</p>
             <p class="content">Dacă există cerere, vom organi.</p>
-            
             
         {/snippet}
 

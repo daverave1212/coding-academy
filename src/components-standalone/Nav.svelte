@@ -2,7 +2,7 @@
 <style>
     :root {
         /* Landscape only */
-        --nav-margin-top: 3rem;
+        --nav-margin-top: 4.4vh;
         --base-nav-height: 4rem;
         --nav-padding-left: var(--page-padding-left);
         --nav-padding-right: var(--page-padding-left);

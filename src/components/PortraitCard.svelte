@@ -4,6 +4,12 @@
         --portrait-width: 300px;
         --portrait-height: 450px
     }
+    @media (max-width: 1368px) {
+        :root {
+            --portrait-width: 270px;
+            --portrait-height: 405px
+        }   
+    }
 
     .portrait-card {
         width: var(--portrait-width);
@@ -31,7 +37,7 @@
     
     .bottom-box {
         width: 100%;
-        height: 31%;
+        height: 25%;
         margin-top: -1%;
         background-color: #111111;
         padding: 1.5rem;
