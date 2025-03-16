@@ -1,20 +1,36 @@
 <style>
     :root {
-        --company-size: 175px;
+        --company-size: 225px;
     }
-    .companies  {
+    .hero-center {
+        max-width: 800px;
+    }
+    /* .companies  {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         flex-grow: 1;
+    } */
+    .companies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        padding-top: 5vh;
+        gap: 7.5vh;
+
     }
     .companies > div {
-        width: var(--company-size);
+        width: 100%;
     }
     img.company {
         width: var(--company-size);
+    }
+
+    b {
+        color: var(--theme-color-2);
     }
 
 </style>
@@ -69,10 +85,23 @@
     </div>
 
     <div class="hero margin-top-4">
-        <div class="hero-center">
+        <div class="hero-center" style="padding-right: 3vw;">
             <h1 class="hero-title">Cine sunt eu?</h1>
-            <h2 class="hero-subtitle margin-top-3">Participa la cele mai practice cursuri de programare pentru incepatori in mai multe domenii. Axat pe rezultate, nu diplome.</h2>
-            <BigButton class="margin-top-3" onclick={() => {}}>Vezi Cursurile</BigButton>
+            <p class="margin-top-2">Salut! Sunt David Irimia, viitorul tau profesor!</p>
+            <br/>
+            <p>Am creat aceste cursuri pentru a demonstra oamenilor ca programarea nu e atat de complicata cum pare - daca invatam lucrurile care trebuie, in ordinea care trebuie, programarea aplicatiilor devine o joaca productiva.</p>
+
+            <h3 class="margin-top-3">Ce ma califica sa tin aceste cursuri?</h3>
+            <p class="margin-top-1">Am experiență semnificativă nu doar în lucru la/cu firme mari
+                <span class="landscape-only">(pe dreapta),</span>
+                <span class="portrait-only">(mai jos),</span>
+            dar și drept freelancer, consultant, antreprenor și tutore, și doresc să îmi duc pasiunea la următorul nivel.</p>
+            <p class="margin-top-1">Am o vârstă suficientă să <b>știu bine despre ce vorbesc</b>, și suficient de mică să îmi amintesc <b>problemele de care m-am lovit</b>, și să știu să le explic pe înțelesul tuturor.</p>
+            <p class="margin-top-1">Am făcut zeci (dacă nu peste 100) de proiecte din diverse domenii, și <b>pe asta ne axăm:</b> proiecte reale, practice si din lumea reală.</p>
+
+
+
+            <!-- <BigButton class="margin-top-3" onclick={() => {}}>Vezi Cursurile</BigButton> -->
         </div>
         <div class="hero-graphic flex-content right relative">
             <FloatingCircle style="--duration: 8.5s; top: -10vh; right: -25%; background-color: var(--theme-color-1);"/>
@@ -80,12 +109,15 @@
             <FloatingCircle style="--duration: 9s; top: calc(60vh); left: 0vw; background-color: var(--theme-color-1); width: 0.5rem;"/>
             <FloatingCircle style="--duration: 6s; left: calc(-0.3 * var(--portrait-width)); top: calc(var(--portrait-height) * 0.35); background-color: var(--theme-color-2); width: 1.5rem;"/>
             <div class="companies">
+                <div class="flex center-content">
+                    <h3 class="center-text">Firme mari cu care am colaborat:</h3>
+                </div>
                 <div class="flex center-content"><img class="company" src="/images/app/Playtika.png"/></div>
                 <div class="flex center-content"><img class="company" src="/images/app/Qualitest.png"/></div>
                 <div class="flex center-content"><img class="company" src="/images/app/BearingPoint.png"/></div>
                 <div class="flex center-content"><img class="company" src="/images/app/Amiq.png"/></div>
                 <div class="flex center-content"><img class="company" src="/images/app/QuestFox.png"/></div>
-                <div class="flex center-content">
+                <div class="flex center-content center-text">
                     <p>...si multe alte companii mai mici.</p>
                 </div>
             </div>

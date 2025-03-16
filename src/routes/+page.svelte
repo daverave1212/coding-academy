@@ -53,7 +53,7 @@
     <div class="flex flex-center" style="gap: 2rem;">
         <PriceCard
             ribbonName="Yellow" ribbonText="App Dev"
-            price={765} subtext="RON"
+            price={850} subtext="RON"
             subtitle="Creeaza aplicatii adevarate la cel mai practic curs de programare apps pentru incepatori, freelanceri si antreprenori."
 
             featureTickName="CheckYellow" features={[
@@ -61,7 +61,7 @@
                 'Apps pe Web/Desktop/Mobile',
                 'UI/UX design',
                 '9-11 lectii, cu diploma la final',
-                'Zona Unirii (sau online)'
+                'Zona Unirii (sau online*)'
             ]}
 
             discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-2)" discounts={[
@@ -70,6 +70,7 @@
                 { text: 'Ma inscriu la ambele cursuri!', discount: 0.1 }
             ]}
             
+            buttonText='Inscrie-te seiunea Iulie!'
             buttonColor='var(--theme-color-2)' buttonAnimationColor='var(--theme-color-1)'
         >
             Zero to Hero: Code Full Real-World Apps
@@ -85,18 +86,20 @@
                 'Game development si game design',
                 'Game marketing + release pe Steam',
                 '14-16 lectii',
-                'Zona Unirii (sau online)'
+                'Zona Unirii (sau online*)'
             ]}
 
             discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-2)" discounts={[
                 { text: 'Ma inscriu pana pe 30 Aprilie!', discount: 0.1 },
                 { text: 'Aduc prieteni!', discount: 0.1 },
-                { text: 'Ma inscriu la ambele cursuri!', discount: 0.1 }
+                { text: 'Ma inscriu la ambele cursuri!', discount: 0.1 },
             ]}
 
+            buttonText='Inscrie-te seiunea Iulie!'
             buttonColor='var(--theme-color-1)' buttonAnimationColor='var(--theme-color-2)'
         >
             Practical Game Making: Code It, Design It, Release It
         </PriceCard>
+        <!-- { text: 'Online', baseDiscount: 0.45 } -->
     </div>
 </div>

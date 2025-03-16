@@ -3,7 +3,7 @@
     import "../app.css";
     import '../color-vars.css'
     import '../fonts.css'
-    import '../font-sizes.css'
+    import '../font-style.css'
     import '../utils.css'
 
     import { navigating } from '$app/stores'

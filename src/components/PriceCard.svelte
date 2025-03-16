@@ -89,24 +89,31 @@
         title, subtitle,
         featureTickName, features,
         discountText, discountCheckColor, discounts,
-        buttonColor, buttonAnimationColor
+        buttonColor, buttonAnimationColor, buttonText
 
 
     } = $derived(props)
 
 
-    let checkboxesChecked = $state([false, false, false])
+    let checkboxesChecked = $state([false, false, false, false])
+    let currentPrice = $state(price)
     let currentDiscount = $state(0)
-    let currentPrice = $derived(price * (1 - currentDiscount))
+
 
     function onCheckboxChange(i) {
         checkboxesChecked[i] = !checkboxesChecked[i]
         checkboxesChecked = checkboxesChecked
-        if (checkboxesChecked[i] == true) {
-            currentDiscount = (Math.floor((currentDiscount + discounts[i].discount) * 100) / 100)
-        } else {
-            currentDiscount = (Math.floor((currentDiscount - discounts[i].discount) * 100) / 100)
-        }
+        const baseDiscount = discounts
+            .filter((discount, i) => discount.baseDiscount != null && checkboxesChecked[i] == true)
+            .reduce((a, b) => a + b.baseDiscount, 0)
+        console.log(baseDiscount)
+        const normalDiscounts = discounts
+            .filter((discount, i) => discount.discount != null && checkboxesChecked[i] == true)
+            .reduce((a, b) => a + b.discount, 0)
+        console.log(normalDiscounts)
+
+        currentPrice = roundDownToNearestFive(Math.floor(price * (1 - baseDiscount) * (1 - normalDiscounts)))
+        currentDiscount = Math.floor((1 - currentPrice / price) * 100)
     }
 
 </script>
@@ -118,7 +125,7 @@
             <div class="flex column">
                 {#if currentDiscount != 0}
                     <div class="left text-align-left">{roundDownToNearestFive(currentPrice)}</div>
-                    <div class="subtext"><span class="subtext-base-price strikethrough">{price}</span> ({Math.floor(currentDiscount * 100)}% discount)</div>
+                    <div class="subtext"><span class="subtext-base-price strikethrough">{price}</span> (-{currentDiscount}%)</div>
                 {:else}
                     <div class="left text-align-left flex">
                         {#if currency != null && currency.length != 0}
@@ -140,13 +147,13 @@
         {/each}
         <p class="feature margin-top-1" style="font-weight: bold;">{discountText}</p>
         {#each discounts as {text, discount}, i (i) }
-            <p class="feature margin-top-3q">
+            <p class="feature margin-top-half">
                 <input bind:checked={checkboxesChecked[i]} onclick={evt => onCheckboxChange(i)} type="checkbox" name={`${ribbonText}-${i}`} style={`accent-color: ${discountCheckColor}`}/>
                 <label onclick={() => onCheckboxChange(i)} name={`${ribbonText}-${i}`}>{text}</label>
             </p>
         {/each}
-        <div class="center-content margin-top-1">
-            <MediumButton color={buttonColor} animationColor={buttonAnimationColor}>Inscrie-te!</MediumButton>
+        <div class="center-content margin-top-half">
+            <MediumButton color={buttonColor} animationColor={buttonAnimationColor}>{buttonText}</MediumButton>
         </div>
     </div>
 </div>
