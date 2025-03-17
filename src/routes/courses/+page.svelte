@@ -1,6 +1,6 @@
 <style>
     .columns {
-        gap: 5vw;
+        gap: 3vw;
     }
     .content {
         font-size: 1.25rem;
@@ -18,6 +18,7 @@
     .purple {
         color: var(--theme-color-1);
     }
+
 </style>
 
 <script>
@@ -32,15 +33,16 @@
 
 </script>
 
-<div class="columns page margin-top-4 relative">
+<div class="columns page smaller margin-top-4 relative">
     <CourseSection
         length="9-11 Lecții"
         perWeek="1 Lecție / Săptămână"
         date="1 Iulie 2025"
         color="var(--theme-color-2)" anticolor="var(--theme-color-1)"
+        ribbonName="Yellow" ribbonText="App Dev"
     >
         {#snippet title()}
-            <span>Zero to Hero:<br/> Code Full Real-World Apps</span>
+            Zero to Hero:<br/> Code Full Real-World Apps
         {/snippet}
 
         {#snippet content()}
@@ -83,6 +85,7 @@
         perWeek="1-2 Lecții / Săptămână"
         date="1 Iulie 2025"
         color="var(--theme-color-1)" anticolor="var(--theme-color-2)"
+        ribbonName="Purple" ribbonText="Game Dev"
     >
         {#snippet title()}
             Practical Game Making:<br/>Code It, Design It, Release It

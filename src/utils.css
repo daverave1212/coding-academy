@@ -60,8 +60,10 @@ button {
     padding-top: 1.25rem;
     padding-bottom: 10vh;
 }
-.page.center-text {
-    text-align: center;
+.page.smaller {
+    padding-left: calc(var(--page-padding-left) / 2);
+    padding-right: calc(var(--page-padding-right) / 2);
+    padding-top: 1.25rem;
 }
 
 .hidden {
@@ -95,6 +97,11 @@ img.shadowed-bottom, img.shadow-bottom {
 .columns {
     display: flex;
     flex-direction: row;
+}
+@media (max-width: 1080px) {
+    .columns {
+        flex-direction: column;
+    }
 }
 .columns > div, .columns .column {
     flex-grow: 1;
