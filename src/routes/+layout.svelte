@@ -4,7 +4,9 @@
     import '../color-vars.css'
     import '../fonts.css'
     import '../font-style.css'
-    import '../utils.css'
+    import '../utils-core.css'
+    import '../utils-utility-classes.css'
+    import '../utils-elements.css'
 
     import { navigating } from '$app/stores'
     import Nav from "../components-standalone/Nav.svelte";

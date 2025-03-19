@@ -1,10 +1,8 @@
 <style>
 
-    .course-section {
-        --color: black;
-        --section-padding: 2vw;
-        padding: var(--section-padding);
-        position: relative;
+    .course-title {
+        font-size: 3.25rem;
+        max-width: 70%;
     }
 
     .by {
@@ -20,32 +18,12 @@
         font-size: 1.25rem;
         font-weight: 600;
     }
-    .course-title {
-        margin-top: 4rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        text-align: center;
-    }
     video {
         width: 100%;
         border-radius: 0.5rem;
     }
 
-    .long-ribbon {
-        position: absolute;
-        height: 3rem;
-        width: calc(100% + 16px);
-        left: -8px;
-        top: 1rem;
 
-        font-family: RoundedNunito;
-        font-size: 1.5rem;
-        line-height: 3rem;
-        text-align: center;
-        color: white;
-        border-radius: 0.5rem;
-        transform: rotate(-2deg);
-    }
 
     .overtext {
         font-family: RoundedNunito;
@@ -84,7 +62,9 @@
 
 <script>
     import Ribbon from "../components-standalone/Ribbon.svelte";
+    import { earlyRegistrationDiscount, isEarlyRegistrationOpen } from "../stores/DiscountsConstants";
     import BigButton from "./BigButton.svelte";
+    import DiscountCheckboxes from "./DiscountCheckboxes.svelte";
     import MediumButton from "./MediumButton.svelte";
 
 
@@ -93,7 +73,8 @@
     let {
         date, length, perWeek,
         color, anticolor,
-        ribbonName, ribbonText
+        ribbonName, ribbonText,
+        price
     } = $derived(props)
 
     let {
@@ -102,19 +83,29 @@
         subtext
     } = $derived(props)
 
+    let currentPrice = $state(price)
+    let currentDiscount = $state(isEarlyRegistrationOpen? earlyRegistrationDiscount * 100: 0)
+
 
 </script>
 
-<div class="course-section column rounded shadowed" style={`--color: ${color};`}>
+<div style={`--color: ${color};`}>
     
     <!-- <Ribbon name={ribbonName} style="left: 0px; top: calc(1.25rem);">{ribbonText}</Ribbon> -->
-    <div class="long-ribbon shadowed" style={`background-color: ${color};`}>
+    <!-- <div class="long-ribbon shadowed" style={`background-color: ${color};`}>
         {ribbonText}
+    </div> -->
+
+    <div class="columns">
+        <h1 class="course-title">
+            {@render title()}
+        </h1>
+        <div class="right-content">
+            <MediumButton style={`margin-top: 0.25rem; height: 3.5rem !important;`} color={color} animationColor={anticolor} onclick={() => {}}>Inscrie-te!</MediumButton>
+        </div>
     </div>
 
-    <h2 class="course-title">
-        {@render title()}
-    </h2>
+    
     
 
     <div class="by margin-top-2">
@@ -133,9 +124,21 @@
             <h4 class="overtext">Dificultate</h4>
             <p class="undertext">Începător</p>
 
-            
             <h4 class="overtext">Durata</h4>
             <p class="undertext">{length}</p>
+
+            <h4 class="overtext">
+                {#if currentDiscount == 0}
+                    Pret
+                {:else}
+                    <span class="strikethrough">{price} RON</span>
+                {/if}
+            </h4>
+            <p class="undertext">{currentPrice} RON</p>
+            <DiscountCheckboxes price={price} color={color} setPriceAndDiscount={(newPrice, newDiscount) => {
+                currentPrice = newPrice
+                currentDiscount = newDiscount
+            }}/>
         </div>
         <div>
             <h4 class="overtext">Data de început</h4>
@@ -143,10 +146,13 @@
 
             <h4 class="overtext">Lecții pe săptămână</h4>
             <p class="undertext">{perWeek}</p>
+
+            <h4 class="overtext">Inscriere</h4>
+            <p class="undertext">Inscrie-te la sesiunea Iulie!</p>
+            <div class="margin-top-half">
+                <MediumButton style="margin-left: -0.25rem; width: 16rem;" color={color} animationColor={anticolor} onclick={() => {}}>Inscrie-te!</MediumButton>
+            </div>
         </div>
-    </div>
-    <div>
-        <MediumButton class="margin-top-2" color={color} animationColor={anticolor} onclick={() => {}}>Inscrie-te!</MediumButton>
     </div>
 
     <h2 class="margin-top-4">Despre curs</h2>

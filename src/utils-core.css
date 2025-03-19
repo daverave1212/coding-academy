@@ -1,0 +1,16 @@
+*, body {
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+body {
+    background-color: var(--background-color);   
+}
+button {
+    border: none;
+}

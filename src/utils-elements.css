@@ -1,0 +1,228 @@
+.icon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.btn {
+    border: none;
+    color: white;
+    border-radius: 0.5rem;
+
+    padding: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+
+    text-decoration: none;
+    text-align: center;
+}
+.btn:disabled, .btn[disabled] {
+    background-color: gray !important;
+}
+.btn.red {
+    background-color: rgb(250, 52, 52);
+}
+.btn.blue {
+    background-color: rgb(52, 138, 250);
+}
+.btn.gray {
+    background-color: gray;
+}
+.btn.big {
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.5rem;
+}
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.tag {
+    font-family: inherit;
+    line-height: inherit;
+    font-size: 0.9rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.25rem;
+    
+    text-align: center;
+    width: fit-content;
+
+    color: white;
+    background-color: rgb(66, 231, 36);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+    grid-row-gap: 5vw;
+}
+.card {
+    width: 100%;
+    height: 100%;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-color: white;
+    transition: 0.25s;
+}
+.card p {
+    font-size: 0.8rem;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 2rem;
+    aspect-ratio: 1;
+
+}
+.floating-object {
+    --duration: 7s;
+    animation:
+        ScaleIn calc(var(--duration) * 0.1) ease-out 1 calc(var(--duration) * 0.1) forwards,
+        FloatingObject var(--duration) ease-in-out infinite calc(var(--duration) * 0.25);
+    transform: translate(0px) scale(0);
+}
+@keyframes ScaleIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+@keyframes FloatingObject {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.snappy-object-on-hover:hover {
+    --rotate: 0deg;
+    
+    animation: SnappyObject 0.4s normal 1;
+    transition: transform;
+    transform: rotate(var(--rotate));
+}
+.snappy-object {
+    --rotate: 0deg;
+    
+    animation: SnappyObject 0.4s normal 1;
+    transition: transform;
+    transform: rotate(var(--rotate));
+}
+@keyframes SnappyObject {
+    0% {
+        transform: rotate(calc(var(--rotate) -5deg));
+    }
+    20% {
+        transform: rotate(calc(var(--rotate) + 5deg));
+    }
+    35% {
+        transform: rotate(calc(var(--rotate) - 2.5deg));
+    }
+    50% {
+        transform: rotate(calc(var(--rotate) + 2.5deg));
+    }
+    65% {
+        transform: rotate(calc(var(--rotate) - 1deg));
+    }
+    80% {
+        transform: rotate(calc(var(--rotate)));
+    }
+    100% {
+        transform: rotate(calc(var(--rotate)));
+    }
+}
+
+
+
+.long-ribbon {
+    position: absolute;
+    height: 3rem;
+    width: calc(100% + 16px);
+    left: -8px;
+    top: 1rem;
+
+    font-family: RoundedNunito;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    border-radius: 0.5rem;
+    transform: rotate(-2deg);
+}
+
+
+.will-animate-transform {
+    --rotate: 0deg;
+    --scale: 0;
+    --x: 0px;
+    --y: 0px;
+    --perspective: 0px;
+    --rotate-3d-x: 0;
+    --rotate-3d-y: 0;
+    --rotate-3d-z: 0;
+    --rotate-3d-rotate: 0deg;
+    --to-rotate: 0deg;
+    --to-scale: 1;
+    --to-x: 0px;
+    --to-y: 0px;
+    --to-perspective: 0px;
+    --to-rotate-3d-x: 0;
+    --to-rotate-3d-y: 0;
+    --to-rotate-3d-z: 0;
+    --to-rotate-3d-rotate: 0deg;
+    --animation-duration: 2s;
+    transition: 'transform 2s cubic-bezier(0.19, 1, 0.22, 1)';
+    transform: translate(var(--x), var(--y)) scale(var(--scale)) rotate(var(--rotate)) perspective(var(--perspective));
+    transform-origin: center;
+}
+.will-animate-transform.started {
+    animation: Anim var(--animation-duration) cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+@keyframes Anim {
+    0% {
+        transform: translate(var(--x), var(--y)) scale(var(--scale)) rotate(var(--rotate)) perspective(var(--perspective));
+    }
+    100% {
+        transform: translate(var(--to-x), var(--to-y)) scale(var(--to-scale)) rotate(var(--to-rotate)) perspective(var(--to-perspective));
+    }
+}
+
+
+.triangle {
+    --size: 2rem;
+    --color: purple;
+    border-left: calc(var(--size) / 2) solid transparent;
+    border-top: calc(var(--size) / 2) solid transparent;
+    border-right: calc(var(--size) / 2) solid transparent;
+    border-bottom: calc(var(--size) / 2) solid transparent;
+}
+.triangle.left {
+    border-left: calc(var(--size) / 2) solid var(--color);
+}
+.triangle.top {
+    border-top: calc(var(--size) / 2) solid var(--color);
+}
+.triangle.right {
+    border-right: calc(var(--size) / 2) solid var(--color);
+}
+.triangle.bottom {
+    border-bottom: calc(var(--size) / 2) solid var(--color);
+}

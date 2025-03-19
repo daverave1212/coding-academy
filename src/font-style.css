@@ -43,7 +43,7 @@ html {
 
 /* Styling */
 *, body {
-    font-family: BaseFont;
+    font-family: RoundedNunito;
 }
 nav {
     font-size: var(--nav-fs);
@@ -83,8 +83,8 @@ p {
     font-family: RoundedNunito;
     font-weight: 400;
 }
-b, i, span, span {
-    font-family: inherit;
+b, i, span {
+    font-family: RoundedNunito;
 }
 input, button, textarea {
     font-family: RoundedNunito;

@@ -33,16 +33,18 @@
 
 </script>
 
-<div class="columns page smaller margin-top-4 relative">
+<div class="page narrowest margin-top-4 relative">
+<!-- <div class="columns page smaller margin-top-4 relative"> -->
     <CourseSection
         length="9-11 Lecții"
         perWeek="1 Lecție / Săptămână"
         date="1 Iulie 2025"
+        price={850}
         color="var(--theme-color-2)" anticolor="var(--theme-color-1)"
         ribbonName="Yellow" ribbonText="App Dev"
     >
         {#snippet title()}
-            Zero to Hero:<br/> Code Full Real-World Apps
+            Zero to Hero: Code Full Real-World Apps
         {/snippet}
 
         {#snippet content()}

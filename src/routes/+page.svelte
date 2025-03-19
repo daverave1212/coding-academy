@@ -9,6 +9,8 @@
     import Ribbon from "../components-standalone/Ribbon.svelte";
     import PriceCard from "../components/PriceCard.svelte";
 
+    import { earlyRegistrationDiscount } from '../stores/DiscountsConstants'
+
 </script>
 
 <style lang="css"></style>
@@ -65,7 +67,7 @@
             ]}
 
             discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-2)" discounts={[
-                { text: 'Ma inscriu pana pe 30 Aprilie!', discount: 0.1 },
+                { text: 'Ma inscriu pana pe 30 Aprilie!', discount: earlyRegistrationDiscount },
                 { text: 'Aduc un prieten!', discount: 0.1 },
                 { text: 'Ma inscriu la ambele cursuri!', discount: 0.1 }
             ]}

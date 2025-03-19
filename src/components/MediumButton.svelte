@@ -2,15 +2,21 @@
     button {
         --color: var(--theme-color-1);
         --animation-color: var(--theme-color-2);
+        --fs: 1.25rem;
+        --padding: 1rem;
+
         font-family: RoundedNunito;
-        font-size: 1.25rem;
+        font-size: var(--fs);
+        line-height: var(--fs);
         font-weight: 500;
+
+        height: calc(var(--fs) + 2 * (var(--padding)));
         
-        padding: 1rem;
+        padding: var(--padding);
         padding-left: 1.5rem;
         padding-right: 1.5rem;
         
-        border-radius: 1.5rem;
+        border-radius: 0.75rem;
 
         color: white;
         background-color: var(--theme-color-1);
