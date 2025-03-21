@@ -15,44 +15,19 @@
         padding: 2.25rem;
         padding-top: 1.75rem;
     }
-    .price .left {
-        font-family: HeroMuli !important;
-        font-size: 4rem;
-    }
 
-    .subtext {
-        font-size: 1rem;
-        margin-top: -0.75rem;
-        color: gray;
-        font-family: RoundedNunito !important;
-        font-weight: 600;
-    }
-    .subtext-base-price {
-        color: gray;
-        font-family: RoundedNunito !important;
-        font-weight: 600;
-    }
-
-    .long-ribbon {
+    /* .discount-tag {
         position: absolute;
-        
-        width: calc(var(--price-card-w) + 1rem);
-        height: 2rem;
-        left: -0.5rem;
-        top: 10.15rem;
-
-        background-color: rgb(224, 37, 37);
-        
-        border-radius: 0.5rem;
-
-        transform: rotate(4deg);
-    }
-    .ribbon-text {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-family: RoundedNunito;
-        color: white;
-    }
+        left: 0.425rem;
+        top: 0.75rem;
+        transform: rotate(-30deg);
+    } */
+    /* .discount-tag {
+        position: absolute;
+        left: 0.425rem;
+        top: 0.75rem;
+        transform: rotate(-30deg);
+    } */
 
     .feature {
         font-size: 1rem;
@@ -67,10 +42,15 @@
 </style>
 
 <script>
-    import Ribbon from "../components-standalone/Ribbon.svelte";
+    import AnimatableSnappy from "../components-standalone/AnimatableSnappy.svelte";
+import Ribbon from "../components-standalone/Ribbon.svelte";
     import { roundDownToNearestFive } from "../lib/utils";
+    import { getBaseDiscount } from "../stores/DiscountsConstants";
     import DiscountCheckboxes from "./DiscountCheckboxes.svelte";
     import MediumButton from "./MediumButton.svelte";
+    import PriceBox from "./PriceBox.svelte";
+
+    
 
     let props = $props()
     let {
@@ -80,31 +60,24 @@
         featureTickName, features,
         discountText, discountCheckColor, discounts,
         buttonColor, buttonAnimationColor, buttonText
-
-
     } = $derived(props)
 
-
-    // let checkboxesChecked = $state([false, false, false, false])
     let currentPrice = $state(price)
-    let currentDiscount = $state(0)
+    let currentDiscount = $state(getBaseDiscount())
+    let triggerDiscountAnimation = $state(() => {})
 
+    let priceBoxProps = $derived({
+        alignment: 'bottom',
+        placeholder: '/ Curs',
+        
+        currentPrice: roundDownToNearestFive(currentPrice),
+        fontFamily: 'HeroMuli',
+        fontSize: '3.25rem',
 
-    // function onCheckboxChange(i) {
-    //     checkboxesChecked[i] = !checkboxesChecked[i]
-    //     checkboxesChecked = checkboxesChecked
-    //     const baseDiscount = discounts
-    //         .filter((discount, i) => discount.baseDiscount != null && checkboxesChecked[i] == true)
-    //         .reduce((a, b) => a + b.baseDiscount, 0)
-    //     console.log(baseDiscount)
-    //     const normalDiscounts = discounts
-    //         .filter((discount, i) => discount.discount != null && checkboxesChecked[i] == true)
-    //         .reduce((a, b) => a + b.discount, 0)
-    //     console.log(normalDiscounts)
-
-    //     currentPrice = roundDownToNearestFive(Math.floor(price * (1 - baseDiscount) * (1 - normalDiscounts)))
-    //     currentDiscount = Math.floor((1 - currentPrice / price) * 100)
-    // }
+        originalPrice: price,
+        originalFontFamily: 'RoundedNunito',
+        originalFontSize: 'calc(1rem + 2px)'
+    })
 
 </script>
 
@@ -113,20 +86,26 @@
     <div class="content">
         <div class="price flex-center margin-top-2">
             <div class="flex column">
-                {#if currentDiscount != 0}
-                    <div class="left text-align-left">{roundDownToNearestFive(currentPrice)}</div>
-                    <div class="subtext"><span class="subtext-base-price strikethrough">{price}</span> (-{currentDiscount}%)</div>
-                {:else}
-                    <div class="left text-align-left flex">
-                        {#if currency != null && currency.length != 0}
-                            <span style="font-family: HeroMuli; font-size: 3rem; margin-top: 1rem; margin-right: 8px; position: inline-block;">{currency}</span>
-                        {/if}
-                        {currentPrice}
-                    </div>
-                    <div class="subtext">{subtext}</div>
-                {/if}
+                <PriceBox {...priceBoxProps}/>
             </div>
         </div>
+        {#if currentDiscount != 0}
+            <AnimatableSnappy
+                style={`
+                    --rotate: 15deg;
+                    position: absolute;
+                    right: 2.5rem;
+                    top: 2.75rem;
+                    transform: rotate(var(--rotate));
+                `}
+                class="discount-tag" setTriggerAnimation={func => triggerDiscountAnimation = func}>
+                <p class="tag green shadowed" style="margin-top: 0.25rem; background-color: rgb(29, 160, 0);">
+                    {currentDiscount}% discount
+                </p>
+            </AnimatableSnappy>
+        {/if}
+        
+        
         <!-- <div class="margin-top-half" style="display: block; width: 100%; height: 1px;"></div> -->
         <h4 class="margin-top-1" style={`font-size: 1.25rem; text-align: center`}>
             {@render props.children?.()}
@@ -139,13 +118,9 @@
         <DiscountCheckboxes color={discountCheckColor} price={price} setPriceAndDiscount={(newPrice, newDiscount) => {
             currentPrice = newPrice
             currentDiscount = newDiscount
+            triggerDiscountAnimation()
         }}/>
-        <!-- {#each discounts as {text, discount}, i (i) }
-            <p class="feature margin-top-half">
-                <input bind:checked={checkboxesChecked[i]} onclick={evt => onCheckboxChange(i)} type="checkbox" name={`${ribbonText}-${i}`} style={`accent-color: ${discountCheckColor}`}/>
-                <label onclick={() => onCheckboxChange(i)} name={`${ribbonText}-${i}`}>{text}</label>
-            </p>
-        {/each} -->
+
         <div class="center-content margin-top-2">
             <MediumButton color={buttonColor} animationColor={buttonAnimationColor}>{buttonText}</MediumButton>
         </div>

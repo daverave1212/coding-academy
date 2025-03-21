@@ -66,11 +66,7 @@
                 'Zona Unirii (sau online*)'
             ]}
 
-            discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-2)" discounts={[
-                { text: 'Ma inscriu pana pe 30 Aprilie!', discount: earlyRegistrationDiscount },
-                { text: 'Aduc un prieten!', discount: 0.1 },
-                { text: 'Ma inscriu la ambele cursuri!', discount: 0.1 }
-            ]}
+            discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-2)"
             
             buttonText='Inscrie-te seiunea Iulie!'
             buttonColor='var(--theme-color-2)' buttonAnimationColor='var(--theme-color-1)'
@@ -91,11 +87,7 @@
                 'Zona Unirii (sau online*)'
             ]}
 
-            discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-2)" discounts={[
-                { text: 'Ma inscriu pana pe 30 Aprilie!', discount: 0.1 },
-                { text: 'Aduc prieteni!', discount: 0.1 },
-                { text: 'Ma inscriu la ambele cursuri!', discount: 0.1 },
-            ]}
+            discountText="Aplicati reduceri:" discountCheckColor="var(--theme-color-1)"
 
             buttonText='Inscrie-te seiunea Iulie!'
             buttonColor='var(--theme-color-1)' buttonAnimationColor='var(--theme-color-2)'

@@ -3,6 +3,12 @@
     width: 1rem;
 }
 
+.line {
+    --color: black;
+    border-top: black 2px solid;
+    height: 0px;
+}
+
 .btn {
     border: none;
     color: white;
@@ -53,6 +59,9 @@
 
     color: white;
     background-color: rgb(66, 231, 36);
+}
+.tag.green {
+    background-color: rgb(29, 160, 0);
 }
 
 .cards {
@@ -121,6 +130,8 @@
 }
 .snappy-object {
     --rotate: 0deg;
+    --to-scale: 1.1;
+    --scale: 1;
     
     animation: SnappyObject 0.4s normal 1;
     transition: transform;
@@ -140,15 +151,32 @@
         transform: rotate(calc(var(--rotate) + 2.5deg));
     }
     65% {
-        transform: rotate(calc(var(--rotate) - 1deg));
+        transform: rotate(calc(var(--rotate) - 1deg)) ;
     }
     80% {
-        transform: rotate(calc(var(--rotate)));
+        transform: rotate(calc(var(--rotate))) ;
     }
     100% {
-        transform: rotate(calc(var(--rotate)));
+        transform: rotate(calc(var(--rotate))) ;
     }
 }
+.growy-object {
+    animation: GrowyObject 0.4s normal 1;
+    transition: transform;
+    transform: scale(1);
+}
+@keyframes GrowyObject {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 
 
