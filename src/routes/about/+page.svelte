@@ -39,6 +39,7 @@
     import DotsPattern from "../../components-standalone/DotsPattern.svelte";
     import FloaterBox from "../../components-standalone/FloaterBox.svelte";
     import FloatingCircle from "../../components-standalone/FloatingCircle.svelte";
+    import SpoilerCollapser from "../../components-standalone/SpoilerCollapser.svelte";
     import BigButton from "../../components/BigButton.svelte";
     import PortraitCard from "../../components/PortraitCard.svelte";
 
@@ -99,7 +100,13 @@
             <p class="margin-top-1">Am o vârstă suficientă să <b>știu bine despre ce vorbesc</b>, și suficient de mică să îmi amintesc <b>problemele de care m-am lovit</b>, și să știu să le explic pe înțelesul tuturor.</p>
             <p class="margin-top-1">Am făcut zeci (dacă nu peste 100) de proiecte din diverse domenii, și <b>pe asta ne axăm:</b> proiecte reale, practice si din lumea reală.</p>
 
-
+            <div class="margin-top-4">
+                <h1>Intrebari si Raspunsuri</h1>
+        
+        
+                <SpoilerCollapser class="margin-top-2" title="De ce?">Pentru ca aia aia si aia.</SpoilerCollapser>
+        
+            </div>
 
             <!-- <BigButton class="margin-top-3" onclick={() => {}}>Vezi Cursurile</BigButton> -->
         </div>
@@ -123,4 +130,6 @@
             </div>
         </div>
     </div>
+
+    
 </div>

@@ -184,6 +184,28 @@
     margin-bottom: 4rem;
 }
 
+.padding-half {
+    padding: 0.5rem;
+}
+.padding-quarter {
+    padding: 0.75rem;
+}
+.padding-3q {
+    padding: 0.75rem;
+}
+.padding-1 {
+    padding: 1rem;
+}
+.padding-2 {
+    padding: 2rem;
+}
+.padding-3 {
+    padding: 3rem;
+}
+.padding-4 {
+    padding: 4rem;
+}
+
 .flex-content {
     display: flex;
     flex-direction: row;
@@ -245,6 +267,9 @@
 
 .shadowed, .shadow {
     box-shadow: rgba(55, 55, 55, 0.2) 0px 2px 8px;
+}
+.shadowed-half, .shadow-half {
+    box-shadow: rgba(55, 55, 55, 0.1) 0px 2px 8px;
 }
 .shadowed-bottom, .shadow-bottom {
     box-shadow: 0px 6px 8px -5px rgba(55, 55, 55, 0.2);
