@@ -21,6 +21,9 @@
         max-width: none;
         text-align: center;
     }
+    .hero-center.left {
+        text-align: left;
+    }
     .hero-graphic {
         min-height: 70vh;
     }
