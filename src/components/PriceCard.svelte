@@ -25,6 +25,18 @@
         display: inline-block;
         margin-right: 0.5rem;
     }
+    .content {
+        height: 100%;
+    }
+    .button-box {
+        flex: 1;
+        flex-grow: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
 
 </style>
 
@@ -42,13 +54,14 @@
 
     let props = $props()
     let {
-        height='665px',
+        height='var(--price-card-h)',
         ribbonName, ribbonText,
-        price, currency, subtext,
-        title, subtitle,
+        price,
+        subtitle,
         featureTickName, features,
-        discountText, discountCheckColor, discounts,
-        buttonColor, buttonAnimationColor, buttonText
+        discountText,
+        color, anticolor,
+        buttonText
     } = $derived(props)
 
     let currentPrice = $state(price)
@@ -70,13 +83,13 @@
 
 </script>
 
-<RotatingBorder style="border-radius: 2rem;">
+<RotatingBorder style="border-radius: 2.125rem;" width='375px' height={height} color={color}>
     <div class="price-card shadowed" style={`height: ${height};`}>
         {#if price != null}
             <Ribbon name={ribbonName} style='top: 1.5rem;'>{ribbonText}</Ribbon>
         {/if}
     
-        <div class="content">
+        <div class="content flex column">
             {#if price != null}
                 <div class="price flex-center margin-top-2">
                     <div class="flex column">
@@ -123,15 +136,15 @@
             {/each}
             {#if price != null}
                 <p class="feature margin-top-1" style="font-weight: bold;">{discountText}</p>
-                <DiscountCheckboxes color={discountCheckColor} price={price} setPriceAndDiscount={(newPrice, newDiscount) => {
+                <DiscountCheckboxes color={color} price={price} setPriceAndDiscount={(newPrice, newDiscount) => {
                     currentPrice = newPrice
                     currentDiscount = newDiscount
                     triggerDiscountAnimation()
                 }}/>
             {/if}
     
-            <div class="center-content margin-top-2">
-                <MediumButton color={buttonColor} animationColor={buttonAnimationColor}>{buttonText}</MediumButton>
+            <div class="button-box margin-top-2">
+                <MediumButton color={color} animationColor={anticolor}>{buttonText}</MediumButton>
             </div>
         </div>
     </div>

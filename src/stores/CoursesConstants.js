@@ -10,7 +10,6 @@ export const courses = [
         price: 850,
         subtext: 'RON',
         discountText: 'Aplicati reduceri:',
-        discountCheckColor: 'var(--theme-color-2)',
         
         featureTickName: 'CheckYellow',
         features: [
@@ -21,9 +20,10 @@ export const courses = [
             'Zona Unirii (sau online*)'
         ],
 
+        color: 'var(--theme-color-2)',
+        anticolor: 'var(--theme-color-1)',
+
         buttonText: 'Inscrie-te sesiunea iulie!',
-        buttonColor: 'var(--theme-color-2)',
-        buttonAnimationColor: 'var(--theme-color-1)'
     },
     {
         name: 'Practical Game Making: Code It, Design It, Release It',
@@ -35,7 +35,6 @@ export const courses = [
         price: 1350,
         subtext: 'RON',
         discountText: 'Aplicati reduceri:',
-        discountCheckColor: 'var(--theme-color-1)',
         
         featureTickName: 'CheckPurple',
         features: [
@@ -46,8 +45,9 @@ export const courses = [
             'Zona Unirii (sau online*)'
         ],
 
+        color: 'var(--theme-color-1)',
+        anticolor: 'var(--theme-color-2)',
+
         buttonText: 'Inscrie-te sesiunea iulie!',
-        buttonColor: 'var(--theme-color-1)',
-        buttonAnimationColor: 'var(--theme-color-2)'
     }
 ]

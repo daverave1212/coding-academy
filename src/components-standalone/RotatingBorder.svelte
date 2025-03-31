@@ -1,23 +1,31 @@
-
 <style>
-    .with-rotating-border {
-        --width: 1000px;
+    .rotating-color-bg {
+        --width: 500px;
+        --height: 500px;
+        --size: calc(max(var(--width), var(--height)) * 2);
+        --color: blue;
+        width: calc(var(--width) + 4px);
         position: relative;
-        overflow: hidden;
         padding: 2px;
+        overflow: hidden;
+        z-index: 1;
     }
-    .rotating-border {
-        position: absolute;
-        background: #FFFFFF;
-        background: conic-gradient(from 315deg, #FFFFFF, #01A2FF);
-        width: calc(2 * var(--width));
-        left: -50%;
-        top: -50%;
-        aspect-ratio: 1/1;
+    .content {
+        z-index: 2;
+    }
 
-        animation: Rotating 3s infinite;
+    .rotator {
+        position: absolute;
+        width: calc(var(--size));
+        height: calc(var(--size));
+        left: calc(var(--size) * -0.5 + var(--width) * 0.5);
+        top: calc(var(--size) * -0.5 + var(--height) * 0.5);
         transform-origin: center;
+        animation: Rotating 4s infinite;
         animation-timing-function: linear;
+
+        background: conic-gradient(from 90deg, transparent 0%, var(--color) 50%, rgba(72,171,224,0) 50%, var(--color) 99%, var(--color) 100%, rgba(0,166,255,0) 100%);
+        /* background-image: conic-gradient(#FFFFFF00, var(--color), #FFFFFF00, var(--color)); */
     }
 
     @keyframes Rotating {
@@ -28,18 +36,22 @@
             transform: rotate(360deg);
         }
     }
-
 </style>
 
 <script>
 
     let props = $props()
 
-    let { width, height } = $derived(props)
+    let { width, height, color, isEnabled=true } = $derived(props)
 
 </script>
 
-<div class={`with-rotating-border ${props.class}`} style={`--width: ${width}; --height: ${height}; ${props.style}`}>
-    <div class="rotating-border"></div>
-    {@render props.children?.()}
+
+<div class={`rotating-color-bg ${props.class}`} style={`--width: ${width}; --height: ${height}; --color: ${color}; ${props.style}`}>
+    {#if isEnabled}
+        <div class="rotator"></div>
+    {/if}
+    <div class="content">
+        {@render props.children?.()}
+    </div>
 </div>

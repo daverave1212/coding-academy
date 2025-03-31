@@ -53,7 +53,14 @@
         </div>
     </div>
 
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <NonpricedCourseCards/>
+
+    <DotsPattern style="top: 90vh; left: calc(-16px);" nRows={20} nCols={4} color={`#DDDDDD`} size={6} gap={20}/>
+    <div id="Courses" class="relative" style="margin-top: 8rem;">
+        <h1 class="hero-title center-text">Cursurile Noastre</h1>
+        <div style="padding: 2rem 10vw 3rem 10vw;">
+            <p class="center-text" style="font-size: 1.5rem;">Vrei sa devii freelancer, antreprenor sau sa iti faci propriile proiecte sau aplicatii? Sau vrei sa inveti sa faci jocuri si sa le lansezi pe Steam?</p>
+        </div>
+        <NonpricedCourseCards/>
+    </div>
 
 </div>
