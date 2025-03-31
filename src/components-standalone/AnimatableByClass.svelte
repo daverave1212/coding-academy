@@ -4,6 +4,10 @@
     .animatable-by-class {
         overflow: visible;
         transition: transform 0.3s ease-out;
+        transform: rotate(0deg);
+    }
+    .rotated-down {
+        transform: rotate(90deg);
     }
 </style>
 
@@ -22,6 +26,7 @@
     })
 
     function toggleClass(cls) {
+        console.log(`Toggleing class`)
         if (extraAnimClass == '') {
             extraAnimClass = cls
         } else {

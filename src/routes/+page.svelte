@@ -10,8 +10,8 @@
     import PriceCard from "../components/PriceCard.svelte";
 
     import { earlyRegistrationDiscount } from '../stores/DiscountsConstants'
-    import PriceCards from "../components/PriceCards.svelte";
-    import NonpriceCards from "../components/NonpriceCards.svelte";
+    import PricedCourseCards from "../components/PricedCourseCards.svelte";
+    import NonpricedCourseCards from "../components/NonpricedCourseCards.svelte";
 
 </script>
 
@@ -54,8 +54,6 @@
     </div>
 
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <PriceCards/>
+    <NonpricedCourseCards/>
 
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <NonpriceCards/>
 </div>

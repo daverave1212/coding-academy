@@ -4,6 +4,7 @@
     .animatable-by-style {
         overflow: visible;
         transition: transform 0.3s ease-out;
+        transform: rotate(0deg);
     }
 </style>
 
@@ -15,22 +16,23 @@
     
     let { setToggle } = $derived(props)
 
-    let extraAnimStyle = $state('')
+    let extraStyle = $state('')
 
     onMount(() => {
-        setToggle(toggleStyle)
+        setToggle(toggleClass)
     })
 
-    function toggleStyle(stl) {
-        if (extraAnimStyle == '') {
-            extraAnimStyle = stl
+    function toggleClass(stl) {
+        console.log(`Toggleing style`)
+        if (extraStyle == '') {
+            extraStyle = stl
         } else {
-            extraAnimStyle = ''
+            extraStyle = ''
         }
     }
 
 </script>
 
-<div class={`animatable-by-style ${props.class}`} style={`${extraAnimStyle} ${props.style}`}>
+<div class={`animatable-by-style`} style={`${extraStyle} ${props.style || ''}`}>
     {@render props.children?.()}
 </div>

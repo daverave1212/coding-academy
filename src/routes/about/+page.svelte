@@ -5,20 +5,12 @@
     .hero-center {
         max-width: 800px;
     }
-    /* .companies  {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        flex-grow: 1;
-    } */
     .companies {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
+        padding-top: 1rem;
         flex-grow: 1;
-        padding-top: 5vh;
         gap: 7.5vh;
 
     }
@@ -42,6 +34,7 @@
     import SpoilerCollapser from "../../components-standalone/SpoilerCollapser.svelte";
     import BigButton from "../../components/BigButton.svelte";
     import PortraitCard from "../../components/PortraitCard.svelte";
+    import Qna from "../../components/QNA.svelte";
 
 </script>
 
@@ -86,7 +79,7 @@
     </div>
 
     <div class="hero margin-top-4">
-        <div class="hero-center" style="padding-right: 3vw;">
+        <div class="hero-center left" style="padding-right: 3vw;">
             <h1 class="hero-title">Cine sunt eu?</h1>
             <p class="margin-top-2">Salut! Sunt David Irimia, viitorul tau profesor!</p>
             <br/>
@@ -100,13 +93,9 @@
             <p class="margin-top-1">Am o vârstă suficientă să <b>știu bine despre ce vorbesc</b>, și suficient de mică să îmi amintesc <b>problemele de care m-am lovit</b>, și să știu să le explic pe înțelesul tuturor.</p>
             <p class="margin-top-1">Am făcut zeci (dacă nu peste 100) de proiecte din diverse domenii, și <b>pe asta ne axăm:</b> proiecte reale, practice si din lumea reală.</p>
 
-            <div class="margin-top-4">
-                <h1>Intrebari si Raspunsuri</h1>
-        
-        
-                <SpoilerCollapser class="margin-top-2" title="De ce?">Pentru ca aia aia si aia.</SpoilerCollapser>
-        
-            </div>
+            <Qna class="margin-top-4">
+
+            </Qna>
 
             <!-- <BigButton class="margin-top-3" onclick={() => {}}>Vezi Cursurile</BigButton> -->
         </div>
