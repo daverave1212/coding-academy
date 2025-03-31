@@ -37,7 +37,7 @@
 
 
 <div class="ribbon rotated flex column center-text" style={props.style}>
-    <img class="shadowed" src={`/images/DoubleRibbon${props.name}30.png`}/>
+    <img class="shadowed-half" src={`/images/DoubleRibbon${props.name}30.png`}/>
     <h3>
         {@render props.children?.()}
     </h3>

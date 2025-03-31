@@ -91,11 +91,6 @@
 
 <div style={`--color: ${color};`}>
     
-    <!-- <Ribbon name={ribbonName} style="left: 0px; top: calc(1.25rem);">{ribbonText}</Ribbon> -->
-    <!-- <div class="long-ribbon shadowed" style={`background-color: ${color};`}>
-        {ribbonText}
-    </div> -->
-
     <div class="columns">
         <h1 class="course-title">
             {@render title()}

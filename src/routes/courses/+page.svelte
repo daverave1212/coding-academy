@@ -18,6 +18,10 @@
     .purple {
         color: var(--theme-color-1);
     }
+    :global(.courses .feature) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
 
 </style>
 
@@ -27,13 +31,14 @@
     import FloatingCircle from "../../components-standalone/FloatingCircle.svelte";
     import BigButton from "../../components/BigButton.svelte";
     import CourseSection from "../../components/CourseSection.svelte";
+    import FeaturesList from "../../components/FeaturesList.svelte";
     import PortraitCard from "../../components/PortraitCard.svelte";
 
 
 
 </script>
 
-<div class="page narrowest margin-top-4 relative">
+<div class="courses page narrowest margin-top-4 relative">
 <!-- <div class="columns page smaller margin-top-4 relative"> -->
     <CourseSection
         length="9-11 Lecții"
@@ -49,24 +54,42 @@
 
         {#snippet content()}
         
-            <p class="content">Cursul se axează pe aplicații front-end: website-uri funcționale si aplicații de Desktop și mobile. Vom face proiecte reale, rezolva probleme adevărate de programare, iar rezultatul final va fi o aplicație gata de livrare.</p>
+            <p class="content">Vom crea website-uri si aplicații de Desktop și mobile. Vom face proiecte reale, rezolva probleme adevărate de programare, iar rezultatul final va fi o aplicație perfect functionala si gata de livrare. Zero to hero!</p>
             
             <h4 class="margin-top-2">Programa</h4>
-            <p class="content">Tehnologiile folosite sunt JavaScript, HTML și CSS.</p>
-            <p class="content">În primă fază, vom învăța fundamentele programării cu JavaScript. Vom trece apoi la HTML si CSS, si vom învăța să le combinam. Vom învăța despre UI/UX design și cum să facem o aplicație frumoasa pe care o putem pune pe web, Desktop sau mobile folosind Electron. Pe lângă acestea, vom invăța multe tips & tricks, sfaturi și bune practici.</p>
-            <p class="content">De-a lungul cursului, vom lucra împreună la un proiect, astfel că tot ce învățăm este către proiectul respectiv (o aplicație pentru un restaurant).</p>
+            <p class="content">Vom învăța următoarele tehnologii:</p>
+            <FeaturesList featureTickName="CheckYellow" features={[
+                'JavaScript',
+                'HTML',
+                'CSS',
+                'JavaScript în combinație cu HTML și CSS',
+                'UI/UX',
+                'GitHub',
+                'Electron pentru Desktop & mobile',
+                'Tips & Tricks, secrete și bune practici',
+                'Predare proiect, diplome și feedback'
+            ]}/>
+            <p class="content">De-a lungul cursului, vom lucra împreună la un proiect, astfel că tot ce învățăm va fi util pentru proiect.</p>
             <p class="content">Fiecare student își va alege, de asemenea, un proiect personal ce va fi predat la finalul cursului.</p>
-            <p class="content">Pe toată perioada cursului voi fi available live și online să răspund la orice întrebare și să ajut studenții cu orice au nevoie.</p>
+            <p class="content">Pe durata cursului voi fi la dispoziție live și online să răspund la orice întrebare și să ajut studenții cu orice au nevoie.</p>
 
             <h4 class="margin-top-2">Durată & Detalii</h4>
-            <p class="content">Fiecare lecție dureaza <b class="yellow">între 2 și 3 ore</b> (cu pauze). Vom stabili de comun acord zilele și orele de întâlnire.</p>
-            <p class="content">Durata cursului poate varia în funcție de viteza cu care ne mișcăm, durata lecțiilor, etc. Dacă rămâne timp, vom puncta și elemente de server, baze de date, tips pentru freelanceri dacă avem interesați și ce e de făcut în continuare.</p>
-            <p class="content">La finalul cursului, dupa predarea proiectului, oferim diplomă.</p>
-            <p class="content">Studenții vor primi acces la materialele cursului și la un grup privat pe WhatsApp și Discord unde pot vorbi cu mine sau alți studenți.</p>
-            <p class="content"><b>Atenție:</b> Studenții trebuie sa vină cu laptopurile personale.</p>
+            <FeaturesList featureTickName="CheckYellow" features={[
+                'Între 9-11 lecții',
+                'Între 2-3 ore per lecție',
+                '10-11 săptămâni timp alocat'
+            ]}/>
+            <p class="content">Studenții vor primi acces la materialele cursului și la un grup privat pe WhatsApp și Discord.</p>
+            <p class="content">Ziua și ora întâlnirilor le vom stabili de comun acord.</p>
+            
 
             <h4 class="margin-top-2">Preturi</h4>
-            <p class="content">Prețul de bază al cursului este 850 RON, cu <b class="yellow">discounturi aplicate</b> pentru înscrierea din timp, aducerea încă unei persoane sau achiziționarea ambelor cursuri (click pe Înscrie-te pentru detalii despre reduceri).</p>
+            <p class="content">Prețul întreg al cursului este 850 RON și puteți beneficia de următoarele<b class="yellow">reduceri:</b>.</p>
+            <FeaturesList featureTickName="CheckYellow" features={[
+                '-10% pentru primii 10 înscriși',
+                '-10% dacă vă înscrieți impreuna cu un prieten',
+                '-10% dacă vă înscrieți la amble cursuri'
+            ]}/>
             <p class="content">Cursul de bază este în persoană, cât mai aproape de zona Unirii, dar dacă există cerere vom ține încă o sesiune suplimentară online, la un preț ajustat.</p>
             <p class="content">Dacă există cerere, vom organi.</p>
             
