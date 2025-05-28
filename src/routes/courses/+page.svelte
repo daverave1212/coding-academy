@@ -2,8 +2,7 @@
     .columns {
         gap: 3vw;
     }
-    .content {
-        font-size: 1.25rem;
+    .courses p {
         margin-top: 0.75rem;
     }
     .content img {
@@ -39,7 +38,7 @@
 
 </script>
 
-<div class="page narrowest margin-top-4 relative">
+<div class="page narrowest courses margin-top-4 relative">
 <!-- <div class="columns page smaller margin-top-4 relative"> -->
     <CourseSection
         length="9-11 Lecții"
@@ -127,7 +126,14 @@
         {/snippet}
 
         {#snippet content()}
+            <p class="content">
+                Peste 90% dintre cei care fac jocuri <b>nu reusesc sa lanseze</b> un joc.<br/>
+                70% dintre jocurile de pe Steam nu isi recupereaza costurile, datorita unui gameplay slab, grafica neatractiva, lipsa unui plan de marketing, etc.<br/>
+                Hai sa invatam sa o facem corect!
+            </p>
+
             <p class="content">Vom construi jocuri de Desktop si mobile, 2D și 3D. Vom învăța să programăm jocuri in limbajul C#, să folosim Unity, vom învăța despre <b class="purple">Game Design</b> practic și la finalul cursului, vom lansa jocul pe Steam! Să facem niște bani din jocul creat!</p>
+
             
             <h4 class="margin-top-2">Programa</h4>
             <p class="content">Cursul cuprinde 2 sub-cursuri ținute în zile separate: cursul de Code & Dev și cursul de Game Design. Ambele subcursuri vin la pachet.</p>

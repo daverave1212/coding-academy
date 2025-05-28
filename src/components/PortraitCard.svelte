@@ -49,11 +49,12 @@
 
 <script>
 
-    let { src, children, style } = $props()
+    let props = $props()
+    let { src, children, style } = $derived(props)
 
 </script>
 
-<div class="portrait-card rounded shadowed snappy-object" style={style}>
+<div class={`portrait-card rounded shadowed snappy-object ${props.class}`} style={style}>
     <div class="img-box">
         <img src={src}/>
     </div>

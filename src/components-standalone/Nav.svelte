@@ -43,7 +43,8 @@
             display: flex;
             flex-direction: row-reverse;
         }
-        nav .landscape-only {
+        nav .landscape-nav-content {
+            display: flex;
             width: 100%;
             height: 100%;
 
@@ -91,7 +92,7 @@
 </script>
 
 <nav {style}>
-    <div class="landscape-only">
+    <div class="landscape-only landscape-nav-content">
         {#each options as {name, href}}
             <a href={href} class={itemClass}>{name}</a>
         {/each}

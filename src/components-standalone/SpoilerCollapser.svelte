@@ -25,6 +25,7 @@
     h3 {
         font-size: var(--size);
         line-height: var(--size);
+        max-width: 70%;
 
         flex-grow: 1;
         padding-left: 0rem;

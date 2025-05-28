@@ -10,8 +10,15 @@
 </script>
 
 <div class={props.class} style={props.style}>
-    <h1>Intrebari si Raspunsuri</h1>        
+    <h1 class="center-text">Intrebari si Raspunsuri</h1>        
     
+    <SpoilerCollapser class="margin-top-2" title="Oferiti oportunitati de angajare dupa curs?">
+        Adevarul este ca pentru angajare criteriile sunt mult mai mari decat poate oferi orice curs, de la orice academie.<br/>
+        Trebuie (de obicei) experienta specializata pe o tehnologie anume, mai multe proiecte facute si teorie (noi suntem practici).<br/>
+        Se poate, totusi? Da, absolut! Piata e mai accesibila decat se spune!<br/><br/>
+        <strong>In schimb, te invatam categoric cum sa intri pe piata de freelance.</strong>
+
+    </SpoilerCollapser>
     <SpoilerCollapser class="margin-top-2" title="Trebuie sa stiu ceva inainte de curs?">
         Nu! N-ai nevoie de nicio cunostinta de programare sau IT. Te invatam noi tot!
     </SpoilerCollapser>
