@@ -14,10 +14,46 @@
     import NonpricedCourseCards from "../components/NonpricedCourseCards.svelte";
     import AboutPage from "./about/AboutPage.svelte";
     import Qna from "../components/QNA.svelte";
+    import Bold from "../components/Bold.svelte";
+    import TickList from "../components/TickList.svelte";
+
+    const jsTick = '/images/CheckYellow.png'
+    const gdTick = '/images/CheckPurple.png'
 
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+    
+    .why-and-for-whom {
+        gap: 8rem;
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+    @media (max-width: 1300px) {
+        .why-and-for-whom {
+            padding-left: 2.5vw;
+            padding-right: 2.5vw;
+        }
+    }
+
+    .aside-box {
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 7px;
+
+        color: black;
+
+        box-shadow: rgba(55, 55, 55, 0.1) 0px 2px 8px;
+    }
+    @media (max-width: 1300px) {
+        .aside-box {
+            padding: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+</style>
 
 <div class="page margin-top-4 relative">
     <DotsPattern style="top: 0vh; left: calc(-64px);" nRows={12} nCols={6} color={`#DDDDDD`} size={6} gap={20}/>
@@ -76,24 +112,31 @@
 
 
 
-    <div class="flex-row gap-4 margin-top-8">
-        <div class="flex-start center-text flex-1">
-            <h2 class="">De ce?</h2>
-            <p class="fs-1_5 margin-top-1">
-                Se zice ca programatori vor fi inlocuiti de inteligenta artificiala.<br/>
-                Fals 🤖<br/>
-                Oricine a incercat sa faca o aplicatie fara cunostinte poate atesta ca este mult mai greu decat pare. Tocmai de aceea este nevoie de programatori care <i>inteleg</i> cum functioneaza si cum se dezvolta o aplicatie.<br/>
-                Va fi nevoie de noi, <i>mult,</i> in continuare - putem garanta.
+    <div class="why-and-for-whom flex-responsive margin-top-8">
+        <div class="flex-start center-text flex-1" style="flex-direction: column;">
+            <h2 class="center-text">De ce?</h2>
+            <p class="margin-top-1 fs-1_5">
+                Programarea este ca magia - creezi ceva util din nimic. Noi vrem sa te invatam programare moderna intr-un mod usor de inteles si eficient.
+                <br/><br/>
+                Te invatam <i>dezvoltare</i>.
+                <br/><br/>
+                Programatorii nu vor fi inlocuiti de AI prea curand 🤖. Din contra, aici <Bold>te invatam si sa folosesti AI precum ChatGPT</Bold> intr-un mod corect, rapid, logic si cu exercitii practice.<br/>
             </p>
         </div>
-        <div class="flex-start center-text flex-1">
-            <h2 class="">Pentru Cine?</h2>
-            <p class="fs-1_5 margin-top-1">
-                Daca vrei setul minim de pasi ca sa dezvolti orice aplicatie, aceste cursuri sunt pentru tine.<br/>
-                Daca ai incercat sa inveti programare si ai zis ca nu poti - sunt pentru tine.<br/>
-                Daca vrei sa lansezi jocuri adevarate si bine facute - sunt pentru tine.<br/>
-                Daca vrei sa intelegi cum functioneaza programarea practica - sunt pentru tine.
-            </p>
+        <div class="flex-start flex-1 center-text" style="flex-direction: column;">
+            <h2 class="center-text">Pentru Cine?</h2>
+            <div class="aside-box margin-top-1">
+                Cei care vor sa isi creeze propria aplicatie
+            </div>
+            <div class="aside-box">
+                Creatori de start-upuri si antreprenori
+            </div>
+            <div class="aside-box">
+                Viitori freelanceri
+            </div>
+            <div class="aside-box">
+                Steam game developeri si designeri in devenire
+            </div>
         </div>
     </div>
 

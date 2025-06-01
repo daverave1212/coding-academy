@@ -4,7 +4,6 @@
 
 .hero-title {
     color: var(--dark-gray);
-    font-family: HeroMuli;
 }
 
 .hero-center {
@@ -25,6 +24,20 @@
         text-align: left;
     }
     .hero-graphic {
-        min-height: 70vh;
+        min-height: 50vh;
     }
+}
+
+.hero-portrait {
+    color: white;
+    
+    margin-top: -30px;
+    margin-left: 10vw;
+    position: relative;
+}
+@media (max-width: 1080px) {
+    .hero-portrait {   
+        margin-top: 0px;
+        margin-left: 0vw;
+    }   
 }
