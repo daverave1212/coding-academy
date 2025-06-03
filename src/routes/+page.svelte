@@ -58,8 +58,8 @@
 <div class="page margin-top-4 relative">
     <DotsPattern style="top: 0vh; left: calc(-64px);" nRows={12} nCols={6} color={`#DDDDDD`} size={6} gap={20}/>
     <DotsPattern style="top: 60vh; right: calc(-48px);" nRows={12} nCols={6} color={`#DDDDDD`} size={6} gap={20}/>
-    <FloatingCircle class="wide-only" style="--duration: 8s; top: calc(35vh); left: calc(var(--page-padding-left) * 0.5); background-color: var(--theme-color-1); width: 16px;"/>
-    <FloatingCircle class="wide-only" style="--duration: 8s; top: calc(35vh); left: calc(var(--page-padding-left) * 0.5); background-color: var(--theme-color-1); width: 16px;"/>
+    <FloatingCircle class="landscape-1300-only" style="--duration: 8s; top: calc(35vh); left: calc(var(--page-padding-left) * 0.5); background-color: var(--theme-color-1); width: 16px;"/>
+    <FloatingCircle class="landscape-1300-only" style="--duration: 8s; top: calc(35vh); left: calc(var(--page-padding-left) * 0.5); background-color: var(--theme-color-1); width: 16px;"/>
     <div class="hero">
         <div class="hero-center">
             <h1 class="hero-title">Cursuri Programare:<br/>Noi Iti Dam Piesele<br/>Tu Construiesti Ce Vrei</h1>
@@ -97,7 +97,7 @@
 
 
     <DotsPattern style="top: 90vh; left: calc(-16px);" nRows={20} nCols={4} color={`#DDDDDD`} size={6} gap={20}/>
-    <div id="Courses" class="relative" style="margin-top: 8rem;">
+    <div id="Courses" class="relative margin-top-8">
         <h1 class="hero-title center-text">Cursurile Noastre</h1>
         <div style="padding: 2rem 10vw 3rem 10vw;">
             <p class="center-text" style="font-size: 1.5rem;">
@@ -105,7 +105,6 @@
                 Vrei sa devii freelancer, antreprenor sau sa iti faci propriile proiecte sau aplicatii? Sau vrei sa inveti sa faci jocuri si sa le lansezi pe Steam?
             </p>
         </div>
-        <!-- <NonpricedCourseCards/> -->
         <PricedCourseCards/>
     </div>
 

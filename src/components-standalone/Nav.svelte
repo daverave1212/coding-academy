@@ -92,12 +92,12 @@
 </script>
 
 <nav {style}>
-    <div class="landscape-only landscape-nav-content">
+    <div class="landscape-1080-only landscape-nav-content">
         {#each options as {name, href}}
             <a href={href} class={itemClass}>{name}</a>
         {/each}
     </div>
-    <div class="portrait-only">
+    <div class="portrait-1080-only">
         <slot></slot>
         <SideMenu isOpen={isBurgerOpen} setIsOpen={setIsBurgerOpen}>
             <div class="portrait-side-menu-content">

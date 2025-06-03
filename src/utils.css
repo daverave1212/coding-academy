@@ -251,29 +251,29 @@ img.shadowed-bottom, img.shadow-bottom {
     text-decoration: line-through;
 }
 
-.portrait-only {
+.portrait-1080-only {
     display: unset;
 }
-.landscape-only {
+.landscape-1080-only {
     display: unset;
 }
 @media (min-width: 1080px) {
-    .portrait-only {
+    .portrait-1080-only {
         display: none;
     }
 }
 @media (max-width: 1080px) {
-    .landscape-only {
+    .landscape-1080-only {
         display: none;
     }
 }
 @media (max-width: 1300px) {
-    .wide-only {
+    .landscape-1300-only {
         display: none;
     }
 }
 @media (min-width: 1300px) {
-    .narrow-only {
+    .portrait-1300-only {
         display: none;
     }
 }

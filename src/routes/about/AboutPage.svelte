@@ -62,51 +62,53 @@
     <FloatingCircle style="--duration: 9s; top: calc(60vh); left: 0vw; background-color: var(--theme-color-1); width: 0.5rem;"/>
     <FloatingCircle style="--duration: 6s; left: -2.5vw; top: calc(var(--portrait-height) * 0.35); background-color: var(--theme-color-2); width: 1.5rem;"/>
 
-    <div class="wide-only">
+    <div class="landscape-1300-only">
         <FloaterBox
             style='z-index: var(--z-lower); bottom: 10vh; left: -5vw;'
             delay={100} src="/images/cs.png"
             rotate={10} scale={1} x={0} y={0} color="var(--theme-color-1)"
         />
-        <FloaterBox
+        <!-- <FloaterBox
                 style='z-index: var(--z-higher); top: 40vh; right: 0vw;'
                 delay={200} src="/images/education.png"
                 rotate={20} scale={1} x={0} y={0} color="var(--theme-color-2)"
-            />
+            /> -->
         <FloaterBox
             style='z-index: var(--z-higher); top: -40vh; left: -7.5vw;'
             src="/images/js.png"
             delay={500} rotate={-10} scale={1} x={0} y={0} color="var(--theme-color-2)"
         />
     </div>
-    <div class="narrow-only">
+    <div class="portrait-1300-only">
 
     </div>
+
+    <FloaterBox
+        style='z-index: var(--z-higher); top: 0rem; left: 2vw;'
+        delay={100} src="/images/cs.png"
+        rotate={10} scale={1} x={0} y={0} color="var(--theme-color-1)"
+    />
+    <FloaterBox
+        style='z-index: var(--z-higher); top: calc(var(--portrait-height) * -0.1); left: calc(-20vw - 5.5rem);'
+        delay={200} src="/images/education.png"
+        rotate={20} scale={1} x={0} y={0} color="var(--theme-color-2)"
+    />
+    <!-- <FloaterBox
+        style='z-index: var(--z-higher); top: calc(var(--portrait-height) * -0.5); left: calc(-5vw - 5.5rem);'
+        delay={300} src="/images/information-button.png"
+        rotate={-30} scale={1} x={0} y={0} color="var(--theme-color-1)"
+    /> -->
+
+
+    <FloaterBox
+        style='z-index: var(--z-higher); top: -4rem; right: calc(-10vw - 0.5rem);'
+        src="/images/growth.png"
+        delay={400} rotate={25} scale={1} x={0} y={0} color="var(--theme-color-1)"
+    />
     
 
     <!-- <div class="flex-content center-content relative" style="height: 100%; flex-grow: 1;">
-            <FloaterBox
-                style='z-index: var(--z-higher); top: calc(var(--portrait-height) * -0.9); left: calc(-30vw - 5.5rem);'
-                delay={100} src="/images/cs.png"
-                rotate={10} scale={1} x={0} y={0} color="var(--theme-color-1)"
-            />
-            <FloaterBox
-                style='z-index: var(--z-higher); top: calc(var(--portrait-height) * -0.1); left: calc(-20vw - 5.5rem);'
-                delay={200} src="/images/education.png"
-                rotate={20} scale={1} x={0} y={0} color="var(--theme-color-2)"
-            />
-            <FloaterBox
-                style='z-index: var(--z-higher); top: calc(var(--portrait-height) * -0.5); left: calc(-5vw - 5.5rem);'
-                delay={300} src="/images/information-button.png"
-                rotate={-30} scale={1} x={0} y={0} color="var(--theme-color-1)"
-            />
-
-
-            <FloaterBox
-                style='z-index: var(--z-higher); top: -4rem; right: calc(-10vw - 0.5rem);'
-                src="/images/growth.png"
-                delay={400} rotate={25} scale={1} x={0} y={0} color="var(--theme-color-1)"
-            />
+            
         <PortraitCard src="/images/app/Me.png"  class="hero-portrait" style="--rotate: -5deg;">
             <h4 style="color: var(--theme-color-2);">David Irimia</h4>
             <p class="margin-top-half">Viitorul tau profesor :)</p>
@@ -122,8 +124,8 @@
         <h3 class="margin-top-3">Ce ma califica sa tin aceste cursuri?</h3>
         <p class="margin-top-1">
             Am experiență semnificativă nu doar în lucru la/cu firme mari
-            <span class="landscape-only">(pe dreapta),</span>
-            <span class="portrait-only">(mai jos),</span>
+            <span class="landscape-1080-only">(pe dreapta),</span>
+            <span class="portrait-1080-only">(mai jos),</span>
             dar și drept freelancer, consultant, antreprenor și tutore, și doresc să îmi duc pasiunea la următorul nivel.
         </p>
         <p class="margin-top-1">Am o vârstă suficientă să <b>știu bine despre ce vorbesc</b>, și suficient de mică să îmi amintesc <b>problemele de care m-am lovit</b>, și să știu să le explic pe înțelesul tuturor.</p>
@@ -133,7 +135,7 @@
         <!-- </div> -->
         <!-- <div class="hero-graphic flex-content right relative">
             <div class="companies">
-                <div class="flex center-content landscape-only">
+                <div class="flex center-content landscape-1080-only">
                     <h3 class="center-text">Firme mari cu care am colaborat:</h3>
                 </div>
                 <div class="flex center-content"><img class="company" src="/images/app/Playtika.png"/></div>

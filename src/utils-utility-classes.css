@@ -69,29 +69,29 @@
     padding-right: calc(var(--page-padding-right) * 2.5);
 }
 
-.portrait-only {
+.portrait-1080-only {
     
 }
-.landscape-only {
+.landscape-1080-only {
     
 }
 @media (min-width: 1080px) {
-    .portrait-only {
+    .portrait-1080-only {
         display: none !important;
     }
 }
 @media (max-width: 1080px) {
-    .landscape-only {
+    .landscape-1080-only {
         display: none !important;
     }
 }
 @media (max-width: 1300px) {
-    .wide-only {
+    .landscape-1300-only {
         display: none !important;
     }
 }
 @media (min-width: 1300px) {
-    .narrow-only {
+    .portrait-1300-only {
         display: none !important;
     }
 }

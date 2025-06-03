@@ -17,7 +17,7 @@ export const courses = [
             'Apps pe Web/Desktop/Mobile',
             'UI/UX design',
             '9-11 lectii, cu diploma la final',
-            'Zona Unirii (sau online*)'
+            'Zona Unirii (sau online*), orar flexibil'
         ],
 
         color: 'var(--theme-color-2)',
@@ -42,7 +42,7 @@ export const courses = [
             'Game development si game design',
             'Game marketing + release pe Steam',
             '14-16 lectii',
-            'Zona Unirii (sau online*)'
+            'Zona Unirii (sau online*), orar flexibil'
         ],
 
         color: 'var(--theme-color-1)',
