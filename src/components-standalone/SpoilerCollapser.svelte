@@ -6,7 +6,7 @@
         --padding: 2rem;
         border: solid #D9D9D9 1px;
         border-radius: 0.5rem;
-        
+        background-color: var(--background-color);    
     }
     .spoiler-collapser .top {
         position: relative;

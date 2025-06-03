@@ -8,6 +8,11 @@
         align-items: center;
         gap: 2rem;
     }
+    @media (max-width: 1080px) {
+        .courses-box {
+            flex-direction: column;
+        }
+    }
 
 </style>
 

@@ -22,6 +22,18 @@
     .floater {
         position: absolute;
     }
+    @media (max-width: 1080px) {
+        .floater-box {
+            height: 4rem;
+            width: 4rem;
+            padding: 0.75rem;
+            border-radius: 1.5rem;
+        }
+        .floater-box img {
+            max-height: 2rem;
+            max-width: 2rem;
+        }
+    }
 
 </style>
 

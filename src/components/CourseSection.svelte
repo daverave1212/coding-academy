@@ -1,8 +1,15 @@
 <style>
 
     .course-title {
-        font-size: 3.25rem;
+        font-size: var(--hero-fs);
         max-width: 70%;
+    }
+    @media (max-width: 1080px) {
+        .course-title {
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
     }
 
     .by {
@@ -57,10 +64,24 @@
         width: calc(var(--h2-fs) - 2 * var(--padding));
         height: calc(var(--h2-fs) - 2 * var(--padding));
     }
+    .course-signup-button-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+    @media (max-width: 1080px) {
+        .course-signup-button-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+    }
 
 </style>
 
 <script>
+	import { goto } from '$app/navigation';
     import Ribbon from "../components-standalone/Ribbon.svelte";
     import { earlyRegistrationDiscount, isEarlyRegistrationOpen } from "../stores/DiscountsConstants";
     import BigButton from "./BigButton.svelte";
@@ -100,24 +121,21 @@
         <h1 class="course-title">
             {@render title()}
         </h1>
-        <div class="right-content">
-            <MediumButton style={`margin-top: 0.25rem; height: 3.5rem !important;`} color={color} animationColor={anticolor} onclick={() => {}}>Inscrie-te!</MediumButton>
+        <div class="course-signup-button-box">
+            <MediumButton style={`margin-top: 0.25rem; height: 3.5rem !important;`} color={color} animationColor={anticolor} onclick={() => { goto('/signup') }}>Inscrie-te!</MediumButton>
         </div>
     </div>
-
-    
-    
 
     <div class="by margin-top-2">
         <img src="/images/app/Me.png"/>
         <p><span style="color: gray;">by</span> David Irimia</p>
     </div>
 
-    <div>
+    <!-- <div>
         <video class="margin-top-1 shadowed" controls>
             <source src="/images/app/test.mp4"/>
         </video>
-    </div>
+    </div> -->
 
     <div class="columns">
         <div>
@@ -150,7 +168,7 @@
             <h4 class="overtext">Inscriere</h4>
             <p class="undertext">Inscrie-te la sesiunea Iulie!</p>
             <div class="margin-top-half">
-                <MediumButton style="margin-left: -0.25rem; width: 16rem;" color={color} animationColor={anticolor} onclick={() => {}}>Inscrie-te!</MediumButton>
+                <MediumButton style="margin-left: -0.25rem; width: 16rem;" color={color} animationColor={anticolor} onclick={() => { goto('/signup') }}>Inscrie-te!</MediumButton>
             </div>
         </div>
     </div>
@@ -160,7 +178,7 @@
         {@render content()}
     </div>
 
-    <MediumButton class="margin-top-3" color={color} animationColor={anticolor} onclick={() => {}}>Inscrie-te!</MediumButton>
+    <MediumButton class="margin-top-3" color={color} animationColor={anticolor} onclick={() => { goto('/signup') }}>Inscrie-te!</MediumButton>
 
     <div class="margin-top-4">
         {@render subtext?.()}

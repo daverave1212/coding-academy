@@ -14,10 +14,10 @@
 
 <script>
 
-    let props = $props()
+    let { src } = $props()
 
 </script>
 
 <div class={`inline-icon center-content`}>
-    <img src={`${props.src}`}/>
+    <img src={src}/>
 </div>

@@ -254,3 +254,29 @@
 .triangle.bottom {
     border-bottom: calc(var(--size) / 2) solid var(--color);
 }
+
+
+.big-button {
+    display: block;
+
+    font-family: RoundedNunito;
+    font-size: 1.75rem;
+    font-weight: 500;
+    
+    padding: 1.75rem;
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+    
+    border-radius: 2.5rem;
+
+    color: white;
+    background-color: var(--theme-color-1);
+
+    text-decoration: none;
+
+    width: fit-content;
+}
+.big-button:hover {
+    cursor: pointer;
+    top: 2rem;
+}

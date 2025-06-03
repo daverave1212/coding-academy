@@ -41,6 +41,7 @@
 </style>
 
 <script>
+	import { goto } from '$app/navigation';
     import AnimatableSnappy from "../components-standalone/AnimatableSnappy.svelte";
     import Ribbon from "../components-standalone/Ribbon.svelte";
     import RotatingBorder from "../components-standalone/RotatingBorder.svelte";
@@ -144,7 +145,7 @@
             {/if}
     
             <div class="button-box margin-top-2">
-                <MediumButton color={color} animationColor={anticolor}>{buttonText}</MediumButton>
+                <MediumButton color={color} animationColor={anticolor} onclick={ () => { goto('/signup') } }>{buttonText}</MediumButton>
             </div>
         </div>
     </div>

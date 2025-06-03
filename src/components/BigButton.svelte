@@ -17,6 +17,7 @@
         cursor: pointer;
         top: 2rem;
     }
+
 </style>
 
 <script>

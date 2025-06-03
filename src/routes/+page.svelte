@@ -17,6 +17,8 @@
     import Bold from "../components/Bold.svelte";
     import TickList from "../components/TickList.svelte";
 
+    import { goto } from '$app/navigation'
+
     const jsTick = '/images/CheckYellow.png'
     const gdTick = '/images/CheckPurple.png'
 
@@ -25,9 +27,9 @@
 <style lang="css">
     
     .why-and-for-whom {
-        gap: 8rem;
-        padding-left: 7vw;
-        padding-right: 7vw;
+        gap: 2rem;
+        padding-left: 4vw;
+        padding-right: 4vw;
     }
     @media (max-width: 1300px) {
         .why-and-for-whom {
@@ -67,7 +69,7 @@
                 Te invatam <strong style="color: var(--theme-color-1)">pasii exacti</strong> ca sa creezi orice - perfect pentru freelanceri, antreprenori si persoane axate pe rezultate practice.<br/>
                 Proiecte reale. Abilități reale. Fără pierdere de vreme: hai sa te propulsam in industrie 🚀
             </h2>
-            <BigButton class="margin-top-3" onclick={() => {}}>Vezi Cursurile</BigButton>
+            <BigButton class="margin-top-3" onclick={() => { goto('#Courses') }}>Vezi Cursurile</BigButton>
         </div>
         <div class="hero-graphic flex-content center-content relative">
             <FloatingCircle style="--duration: 8.5s; top: -10vh; right: -25%; background-color: var(--theme-color-1);"/>
@@ -88,7 +90,7 @@
                         delay={250} rotate={25} scale={1} x={0} y={0} color="var(--theme-color-2)"
                     />
                     <h4 style="color: var(--theme-color-2);">David Irimia</h4>
-                    <p class="margin-top-half">Let's see where it goes!</p>
+                    <p class="margin-top-half">Viitorul tau profesor!</p>
                 </PortraitCard>
             </div>
         </div>
@@ -102,7 +104,7 @@
         <div style="padding: 2rem 10vw 3rem 10vw;">
             <p class="center-text" style="font-size: 1.5rem;">
                 Ne axam pe rezultate practice in cel mai scurt timp, cu cel mai mic efort si cu cele mai relevante informatii pentru ce ai nevoie.<br/>
-                Vrei sa devii freelancer, antreprenor sau sa iti faci propriile proiecte sau aplicatii? Sau vrei sa inveti sa faci jocuri si sa le lansezi pe Steam?
+                Vrei sa devii freelancer, antreprenor sau sa iti faci propriile proiecte sau <Bold color="js">aplicatii</Bold>? Sau vrei sa inveti sa faci jocuri si sa le lansezi pe <Bold>Steam</Bold>?
             </p>
         </div>
         <PricedCourseCards/>
@@ -136,6 +138,16 @@
             <div class="aside-box">
                 Steam game developeri si designeri in devenire
             </div>
+        </div>
+        <div class="flex-start flex-1 center-text" style="flex-direction: column;">
+            <h2 class="center-text">Cum?</h2>
+            <p class="margin-top-1 fs-1_5">
+                De cele mai multe ori, less is more.
+                <br/><br/>
+                Nu te invatam ce n-ai nevoie. Doar piesele esentiale cu care poti construi orice.
+                <br/><br/>
+                Maestria inseamna stapanirea elementelor de baza.
+            </p>
         </div>
     </div>
 

@@ -95,7 +95,6 @@
             <h4 class="margin-top-2">Preturi</h4>
             <p class="content">Prețul de bază este 850 RON per intregul curs, si puteti beneficia de urmatoarele <b class="yellow">reduceri:</b></p>
             <TickList src={jsTick} items={[
-                '-10% pentru primii 10 inscrisi',
                 '-10% daca va inscrieti impreuna cu un prieten',
                 '-10% daca va inscrieti la ambele cursuri',
             ]}/>
@@ -168,7 +167,6 @@
             <h4 class="margin-top-2">Preturi</h4>
             <p class="content">Prețul de bază este 1350 RON per intregul curs, si puteti beneficia de urmatoarele <b class="purple">reduceri:</b></p>
             <TickList src={gdTick} items={[
-                '-10% pentru primii 10 inscrisi',
                 '-10% daca va inscrieti impreuna cu un prieten',
                 '-10% daca va inscrieti la ambele cursuri',
             ]}/>

@@ -47,6 +47,7 @@
 </style>
 
 <script>
+	import Bold from './../../components/Bold.svelte';
     import DotsPattern from "../../components-standalone/DotsPattern.svelte";
     import FloaterBox from "../../components-standalone/FloaterBox.svelte";
     import FloatingCircle from "../../components-standalone/FloatingCircle.svelte";
@@ -64,35 +65,50 @@
 
     <div class="landscape-1300-only">
         <FloaterBox
-            style='z-index: var(--z-lower); bottom: 10vh; left: -5vw;'
-            delay={100} src="/images/cs.png"
-            rotate={10} scale={1} x={0} y={0} color="var(--theme-color-1)"
-        />
-        <!-- <FloaterBox
-                style='z-index: var(--z-higher); top: 40vh; right: 0vw;'
-                delay={200} src="/images/education.png"
-                rotate={20} scale={1} x={0} y={0} color="var(--theme-color-2)"
-            /> -->
-        <FloaterBox
             style='z-index: var(--z-higher); top: -40vh; left: -7.5vw;'
             src="/images/js.png"
             delay={500} rotate={-10} scale={1} x={0} y={0} color="var(--theme-color-2)"
         />
+        <FloaterBox
+            style='z-index: var(--z-lower); bottom: 10vh; left: -5vw;'
+            delay={100} src="/images/cs.png"
+            rotate={10} scale={1} x={0} y={0} color="var(--theme-color-1)"
+        />
+        <FloaterBox
+                style='z-index: var(--z-higher); top: 40vh; right: 0vw;'
+                delay={200} src="/images/education.png"
+                rotate={20} scale={1} x={0} y={0} color="var(--theme-color-2)"
+            />
+        <FloaterBox
+            style='z-index: var(--z-higher); top: -4rem; right: 2vw;'
+            src="/images/growth.png"
+            delay={400} rotate={25} scale={1} x={0} y={0} color="var(--theme-color-1)"
+        />
     </div>
     <div class="portrait-1300-only">
-
+        <FloaterBox
+            style='z-index: var(--z-higher); top: -68vh; left: -7.5vw;'
+            src="/images/js.png"
+            delay={500} rotate={-10} scale={1} x={0} y={0} color="var(--theme-color-2)"
+        />
+        <FloaterBox
+            style='z-index: var(--z-higher); top: -2rem; right: 35vw;'
+            src="/images/growth.png"
+            delay={400} rotate={25} scale={1} x={0} y={0} color="var(--theme-color-1)"
+        />
+        <FloaterBox
+            style='z-index: var(--z-lower); bottom: 10vh; left: -5vw;'
+            delay={100} src="/images/cs.png"
+            rotate={10} scale={1} x={0} y={0} color="var(--theme-color-1)"
+        />
+        <FloaterBox
+            style='z-index: var(--z-higher); top: 40vh; right: 0vw;'
+            delay={200} src="/images/education.png"
+            rotate={20} scale={1} x={0} y={0} color="var(--theme-color-2)"
+        />
     </div>
 
-    <FloaterBox
-        style='z-index: var(--z-higher); top: 0rem; left: 2vw;'
-        delay={100} src="/images/cs.png"
-        rotate={10} scale={1} x={0} y={0} color="var(--theme-color-1)"
-    />
-    <FloaterBox
-        style='z-index: var(--z-higher); top: calc(var(--portrait-height) * -0.1); left: calc(-20vw - 5.5rem);'
-        delay={200} src="/images/education.png"
-        rotate={20} scale={1} x={0} y={0} color="var(--theme-color-2)"
-    />
+
     <!-- <FloaterBox
         style='z-index: var(--z-higher); top: calc(var(--portrait-height) * -0.5); left: calc(-5vw - 5.5rem);'
         delay={300} src="/images/information-button.png"
@@ -100,11 +116,7 @@
     /> -->
 
 
-    <FloaterBox
-        style='z-index: var(--z-higher); top: -4rem; right: calc(-10vw - 0.5rem);'
-        src="/images/growth.png"
-        delay={400} rotate={25} scale={1} x={0} y={0} color="var(--theme-color-1)"
-    />
+    
     
 
     <!-- <div class="flex-content center-content relative" style="height: 100%; flex-grow: 1;">
@@ -117,19 +129,22 @@
 
     <div class="margin-top-4">
         <h1 class="hero-title">Cine sunt eu?</h1>
-        <p class="margin-top-2">Salut! Sunt David Irimia, viitorul tau profesor :)</p>
+        <p class="margin-top-2">Salut! Sunt David, viitorul tau profesor :)</p>
         <br/>
-        <p>Am creat aceste cursuri pentru a demonstra oamenilor ca programarea nu e atat de complicata cum pare - daca invatam lucrurile care trebuie, in ordinea care trebuie, programarea aplicatiilor devine o joaca productiva.</p>
-
-        <h3 class="margin-top-3">Ce ma califica sa tin aceste cursuri?</h3>
+        <p>Am creat aceste cursuri pentru a demonstra ca programarea nu e atat de complicata cum pare - daca invatam lucrurile care trebuie, in ordinea care trebuie, programarea <Bold color="var(--theme-color-2-darker)">aplicatiilor</Bold> devine o <Bold>joaca</Bold> productiva.</p>
+        <br/>
+        <p>Sunt un <strong>10x developer</strong> - extrem de productiv in foarte putin timp. Vreau sa invat lumea sa fie la fel.</p>
+        <h3 class="margin-top-3">Experienta Mea</h3>
         <p class="margin-top-1">
-            Am experiență semnificativă nu doar în lucru la/cu firme mari
-            <span class="landscape-1080-only">(pe dreapta),</span>
-            <span class="portrait-1080-only">(mai jos),</span>
-            dar și drept freelancer, consultant, antreprenor și tutore, și doresc să îmi duc pasiunea la următorul nivel.
+            Am colaborat cu mari din industria dezvoltarii de <Bold color="var(--theme-color-2-darker)">aplicatii</Bold>, precum Amiq si BearingPoint, si din industria dezvoltarii <Bold>jocurilor</Bold>, precum Playtika si FoxQuest.
         </p>
-        <p class="margin-top-1">Am o vârstă suficientă să <b>știu bine despre ce vorbesc</b>, și suficient de mică să îmi amintesc <b>problemele de care m-am lovit</b>, și să știu să le explic pe înțelesul tuturor.</p>
-        <p class="margin-top-1">Am făcut zeci (dacă nu peste 100) de proiecte din diverse domenii, și <b>pe asta ne axăm:</b> proiecte reale, practice si din lumea reală.</p>
+        <p>
+            Am lucrat ca freelancer de proiecte mici, mari si medii si am creat sute de aplicatii si jocuri de toate tipurile.<br/>
+            Pana la urma, pe asta ne axam: proiecte reale.
+        </p>
+        <p class="margin-top-1">
+            Am predat programare si informatica multor oameni. Stiu bine domeniul, si inteleg intregul ecosistem. Am experienta ideala si sa imi amintesc problemele de care m-am lovit, si sa stiu sa le explic pe intelesul tuturor.
+        </p>
 
             <!-- <BigButton class="margin-top-3" onclick={() => {}}>Vezi Cursurile</BigButton> -->
         <!-- </div> -->
