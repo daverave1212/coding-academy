@@ -14,7 +14,10 @@
     <SpoilerCollapser class="margin-top-2" title="Cum ma inscriu?">
         Conteacteaza-ma direct prin WhatsApp, apel telefonic sau email pentru inscrieri!
         <img style="max-width: 80%; display: block; margin-top: 0.75rem;" src="n.png"/>
-    </SpoilerCollapser>     
+    </SpoilerCollapser>
+    <SpoilerCollapser class="margin-top-1" title="Pe ce data incepe cursul?">
+        Data exacta va fi stabilita de comun acord cu grupa, in luna Iulie.
+    </SpoilerCollapser>
     <SpoilerCollapser class="margin-top-1" title="Trebuie sa stiu ceva inainte de curs?">
         Nu! N-ai nevoie de nicio cunostinta de programare sau IT. Te invatam noi tot!
     </SpoilerCollapser>
@@ -41,7 +44,7 @@
         </i>
     </SpoilerCollapser>
     <SpoilerCollapser class="margin-top-1" title="Oferiti oportunitati de angajare dupa curs?">
-        Iti oferim cat mai multe posibil in cele 2-3 luni de curs.<br/>
+        Iti oferim cat se poate de mult in cele 2-3 luni de curs.<br/>
         <strong>Te invatam categoric cum sa intri pe piata in freelance si game dev, si iti dam sfaturi de angajare!</strong>
     </SpoilerCollapser>
     <SpoilerCollapser class="margin-top-1" title="De ce durata cursului poate varia?">

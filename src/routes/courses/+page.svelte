@@ -142,7 +142,8 @@
             <TickList src={gdTick} items={[
                 'C#',
                 'Unity',
-                'Durata: 9-11 sesiuni a 2-3 ore, o data pe saptamana'
+                'Durata: 9-11 sesiuni a 2-3 ore, o data pe saptamana',
+                'Incepem la mijlocul/finalul lui Iulie'
             ]}/>
             <p class="content">De-a lungul cursului, vom lucra împreună la un proiect, la care fiecare student va adăuga și modifica bucăți (îl va personaliza).</p>
             <p class="content">Proiectul final va fi realizat pe echipe de cate 2-3 studenti.</p>
@@ -157,7 +158,8 @@
                 'Marketing',
                 'Steam',
                 'Advice and tips & tricks',
-                'Durata: 4-5 sesiuni a 1-2 ore, o data la doua saptamani'
+                'Durata: 4-5 sesiuni a 1-2 ore, o data la doua saptamani',
+                'Incepem la mijlocul/finalul lui Iulie'
             ]}/>
             
             <h4 class="margin-top-2">Diploma si Resurse</h4>

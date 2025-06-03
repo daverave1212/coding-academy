@@ -65,10 +65,10 @@
         />
     </div>
 
-    <h1 class="hero-title">Inscriere Cursuri</h1>
+    <h1 class="hero-title">Contact</h1>
     <h2 class="hero-subtitle margin-top-3">
-        Pentru inscrieri, contactati-ma direct, prin mesaj sau apel direct.
-        Sesiunea incepe la o data stabilita de comun acord, in Iulie.
+        Va stau la dispozitie pentru orice informatie! <br/>
+        Contactati-ma direct, prin mesaj sau apel direct.
         <div class="margin-top-2">
             <img src="n.png" style="max-width: 85vw; display: block;"/>
         </div>
