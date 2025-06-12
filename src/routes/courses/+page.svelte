@@ -89,6 +89,7 @@
                 'CSS',
                 'Combinarea JavaScript cu HTML si CSS',
                 'Git',
+                'Task management',
                 'UI/UX Design',
                 'Electron',
                 'Deploy pe Web/Mobile/Desktop',
@@ -141,7 +142,7 @@
         ribbonName="Purple" ribbonText="Game Dev"
     >
         {#snippet title()}
-            Practical Game Making: Code It, Design It, Release It
+            Practical Game Dev: Code, Design & Release
         {/snippet}
 
         {#snippet content()}
@@ -174,6 +175,7 @@
             <TickList src={gdTick} items={[
                 `Cum să facem un joc atractiv si calitativ`,
                 'Mechanics, game loop, etc',
+                'Organizare & lucru in echipa',
                 'Asset store',
                 'Marketing',
                 'Steam',

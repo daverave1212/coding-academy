@@ -30,7 +30,7 @@ export const courses = [
     {
         id: 'game-dev',
 
-        name: 'Practical Game Making: Code It, Design It, Release It',
+        name: 'Practical Game Dev: Code, Design & Release',
         subtitle: "Code it, design it, release it: cel mai practic curs de dezvoltare de jocuri pentru incepatori.",
         
         ribbonName: 'Purple',

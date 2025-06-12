@@ -64,10 +64,13 @@
     <FloatingCircle class="landscape-1300-only" style="--duration: 8s; top: calc(35vh); left: calc(var(--page-padding-left) * 0.5); background-color: var(--theme-color-1); width: 16px;"/>
     <div class="hero">
         <div class="hero-center">
-            <h1 class="hero-title">Cursuri Programare:<br/>Noi Iti Dam Piesele<br/>Tu Construiesti Ce Vrei</h1>
+            <!-- <h1 class="hero-title">Cursuri Programare:<br/>Noi Iti Dam Piesele<br/>Tu Construiesti Ce Vrei</h1> -->
+            <h1 class="hero-title">Cursuri Programare:<br/>Invata Intr-un Mod Neobisnuit</h1>
             <h2 class="hero-subtitle margin-top-3">
-                Te invatam <strong style="color: var(--theme-color-1)">pasii exacti</strong> ca sa creezi orice - perfect pentru freelanceri, antreprenori si persoane axate pe rezultate practice.<br/>
-                Proiecte reale. Abilități reale. Fără pierdere de vreme: hai sa te propulsam in industrie 🚀
+                Te invatam sa creezi orice <Bold>intr-un mod neobisnuit</Bold> prin acest nou tip de curs <Bold>experimental</Bold>.<br/>
+                Axat pe practialitate - proiecte reale, abilitati reale. Te invatam <Bold>exact si doar</Bold> ce ai nevoie.
+                <!-- Te invatam <Bold>pasii exacti</Bold> ca sa creezi orice - perfect pentru freelanceri, antreprenori si persoane axate pe rezultate practice.<br/>
+                Proiecte reale. Abilități reale. Fără pierdere de vreme: hai sa te propulsam in industrie 🚀 -->
             </h2>
             <BigButton class="margin-top-3" onclick={() => { goto('#Courses') }}>Vezi Cursurile</BigButton>
         </div>
@@ -103,8 +106,8 @@
         <h1 class="hero-title center-text">Cursurile Noastre</h1>
         <div style="padding: 2rem 10vw 3rem 10vw;">
             <p class="center-text" style="font-size: 1.5rem;">
-                Ne axam pe rezultate practice in cel mai scurt timp, cu cel mai mic efort si cu cele mai relevante informatii pentru ce ai nevoie.<br/>
-                Vrei sa devii freelancer, antreprenor sau sa iti faci propriile proiecte sau <Bold color="js">aplicatii</Bold>? Sau vrei sa inveti sa faci jocuri si sa le lansezi pe <Bold>Steam</Bold>?
+                Cursurile noastre vor sa simuleze un <Bold>work environment similar cu un training sau internship</Bold>, cu taskuri si proiecte similare cu cele din viata reala, cu rezultate practice in cel mai scurt timp, cu cel mai mic efort si doar cu cele mai relevante informatii pentru ce ai nevoie.<br/>
+                Vrei sa iti faci propriile proiecte sau <Bold color="js">aplicatii</Bold>? Sau vrei sa inveti sa faci jocuri si sa le lansezi pe <Bold>Steam</Bold>?
             </p>
         </div>
         <NonpricedCourseCards/>
