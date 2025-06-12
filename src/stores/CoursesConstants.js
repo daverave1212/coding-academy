@@ -1,6 +1,8 @@
 
 export const courses = [
     {
+        id: 'app-dev',
+
         name: 'Zero to Hero: Code Full Real-World Apps',
         subtitle: "Creeaza aplicatii adevarate la cel mai practic curs de programare apps pentru incepatori, freelanceri si antreprenori.",
         
@@ -23,9 +25,11 @@ export const courses = [
         color: 'var(--theme-color-2)',
         anticolor: 'var(--theme-color-1)',
 
-        buttonText: 'Inscrie-te sesiunea iulie!',
+        buttonText: 'Vezi cursul!',
     },
     {
+        id: 'game-dev',
+
         name: 'Practical Game Making: Code It, Design It, Release It',
         subtitle: "Code it, design it, release it: cel mai practic curs de dezvoltare de jocuri pentru incepatori.",
         
@@ -48,6 +52,6 @@ export const courses = [
         color: 'var(--theme-color-1)',
         anticolor: 'var(--theme-color-2)',
 
-        buttonText: 'Inscrie-te sesiunea iulie!',
+        buttonText: 'Vezi cursul!',
     }
 ]

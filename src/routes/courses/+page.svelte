@@ -24,6 +24,7 @@
 </style>
 
 <script>
+    import { onMount } from "svelte";
     import DotsPattern from "../../components-standalone/DotsPattern.svelte";
     import FloaterBox from "../../components-standalone/FloaterBox.svelte";
     import FloatingCircle from "../../components-standalone/FloatingCircle.svelte";
@@ -36,14 +37,31 @@
     const jsTick = '/images/CheckYellow.png'
     const gdTick = '/images/CheckPurple.png'
 
+    onMount(() => {
+        const hash = window.location.hash
+
+        if (hash) {
+            const targetId = hash.substring(1)
+            setTimeout(() => {
+                const targetElement = document.getElementById(targetId)
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth', // Optional: for smooth scrolling
+                        block: 'start'      // Optional: align the top of the element to the top of the viewport
+                    })
+                }
+            }, 350)
+        }
+    })
+
 </script>
 
 <div class="page narrowest courses margin-top-4 relative">
-<!-- <div class="columns page smaller margin-top-4 relative"> -->
     <CourseSection
+        id="app-dev"
         length="9-11 Lecții"
         perWeek="1 Lecție / Săptămână"
-        date="1 Iulie 2025"
+        date="30 Iulie 2025"
         price={850}
         color="var(--theme-color-2)" anticolor="var(--theme-color-1)"
         ribbonName="Yellow" ribbonText="App Dev"
@@ -114,9 +132,11 @@
 
 
     <CourseSection
+        id="game-dev"
         length="14-16 Lecții"
         perWeek="1-2 Lecții / Săptămână"
-        date="1 Iulie 2025"
+        date="30 Iulie 2025"
+        price={1350}
         color="var(--theme-color-1)" anticolor="var(--theme-color-2)"
         ribbonName="Purple" ribbonText="Game Dev"
     >

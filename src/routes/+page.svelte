@@ -107,7 +107,7 @@
                 Vrei sa devii freelancer, antreprenor sau sa iti faci propriile proiecte sau <Bold color="js">aplicatii</Bold>? Sau vrei sa inveti sa faci jocuri si sa le lansezi pe <Bold>Steam</Bold>?
             </p>
         </div>
-        <PricedCourseCards/>
+        <NonpricedCourseCards/>
     </div>
 
 

@@ -2,7 +2,7 @@
 
     .course-title {
         font-size: var(--hero-fs);
-        max-width: 70%;
+        max-width: 85%;
     }
     @media (max-width: 1080px) {
         .course-title {
@@ -82,6 +82,7 @@
 
 <script>
 	import { goto } from '$app/navigation';
+    import { onMount } from 'svelte';
     import Ribbon from "../components-standalone/Ribbon.svelte";
     import { earlyRegistrationDiscount, isEarlyRegistrationOpen } from "../stores/DiscountsConstants";
     import BigButton from "./BigButton.svelte";
@@ -92,6 +93,7 @@
     let props = $props()
 
     let {
+        id,
         date, length, perWeek,
         color, anticolor,
         ribbonName, ribbonText,
@@ -107,7 +109,6 @@
     let currentPrice = $state(price)
     let currentDiscount = $state(isEarlyRegistrationOpen? earlyRegistrationDiscount * 100: 0)
 
-
 </script>
 
 <div style={`--color: ${color};`}>
@@ -117,14 +118,16 @@
         {ribbonText}
     </div> -->
 
-    <div class="columns">
-        <h1 class="course-title">
-            {@render title()}
-        </h1>
+    <!-- <div class="columns">
+        
         <div class="course-signup-button-box">
             <MediumButton style={`margin-top: 0.25rem; height: 3.5rem !important;`} color={color} animationColor={anticolor} onclick={() => { goto('/signup') }}>Inscrie-te!</MediumButton>
         </div>
-    </div>
+    </div> -->
+
+    <h1 class="course-title" id={id}>
+        {@render title()}
+    </h1>
 
     <div class="by margin-top-2">
         <img src="/images/app/Me.png"/>

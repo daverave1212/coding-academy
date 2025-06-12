@@ -55,6 +55,7 @@
 
     let props = $props()
     let {
+        id,
         height='var(--price-card-h)',
         ribbonName, ribbonText,
         price,
@@ -145,7 +146,7 @@
             {/if}
     
             <div class="button-box margin-top-2">
-                <MediumButton color={color} animationColor={anticolor} onclick={ () => { goto('/signup') } }>{buttonText}</MediumButton>
+                <MediumButton color={color} animationColor={anticolor} onclick={ () => { goto(`/courses#${id}`) } }>{buttonText}</MediumButton>
             </div>
         </div>
     </div>
